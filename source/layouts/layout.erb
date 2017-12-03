@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title><%= current_page.data.title || "MCT" %></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/images/favicon.ico">
+
+  <!-- FONTS -->
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,400italic,700,700italic'>
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Exo:400,400italic,700,700italic'>
+
+  <!-- CSS -->
+  <%= stylesheet_link_tag "global" %>
+  <%= stylesheet_link_tag "structure" %>
+  <%= stylesheet_link_tag "profile" %>
+  <%= stylesheet_link_tag "custom" %>
+
+  <!-- Revolution Slider -->
+  <link rel="stylesheet" href="/plugins/rs-plugin/css/settings.css">
+
+</head>
+
+<body class="<%= current_page.data.bodyClass %>">
+  <div id="loading" class="spinner-bg">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+  <div id="Wrapper">
+    <div id="Header_wrapper">
+      <header id="Header">
+
+        <%= partial "partials/topbar" %>
+        <%= yield %>
+
+  <script>
+    jQuery(window).load(function() {
+      var retina = window.devicePixelRatio > 1 ? true : false;
+      if (retina) {
+        var retinaEl = jQuery('#logo img.logo-main');
+        var retinaLogoW = retinaEl.width();
+        var retinaLogoH = retinaEl.height();
+        retinaEl
+          .attr('src', '/images/retina-profile.png')
+          .width(retinaLogoW)
+          .height(retinaLogoH);
+        var stickyEl = jQuery('#logo img.logo-sticky');
+        var stickyLogoW = stickyEl.width();
+        var stickyLogoH = stickyEl.height();
+        stickyEl
+          .attr('src', '/images/retina-profile.png')
+          .width(stickyLogoW)
+          .height(stickyLogoH);
+        var mobileEl = jQuery('#logo img.logo-mobile');
+        var mobileLogoW = mobileEl.width();
+        var mobileLogoH = mobileEl.height();
+        mobileEl
+          .attr('src', '/images/retina-profile.png')
+          .width(mobileLogoW)
+          .height(mobileLogoH);
+      }
+      jQuery('#loading').hide();
+    });
+  </script>
+</body>
+</html>
