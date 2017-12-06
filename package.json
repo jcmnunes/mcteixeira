@@ -6,9 +6,12 @@
   "dependencies": {
     "gatsby": "^1.9.127",
     "gatsby-link": "^1.6.30",
-    "gatsby-plugin-react-helmet": "^1.0.8"
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "react-scroll": "^1.7.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
