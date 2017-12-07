@@ -1,25 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { Portal } from 'react-portal';
+import { Link } from 'react-scroll';
 import styles from './Burger.module.scss';
 
-class Menu extends React.Component {
+class MenuPortal extends React.Component {
   constructor(props) {
     super(props);
-    this.el = document.createElement('div');
+    this.state = { mounted: false };
   }
 
   componentDidMount() {
-    const menuRoot = document.getElementById('menu-root');
-    menuRoot.appendChild(this.el);
-  }
-
-  componentWillUnmount() {
-    const menuRoot = document.getElementById('menu-root');
-    menuRoot.removeChild(this.el);
+    this.setState({ mounted: true });
   }
 
   render() {
-    return ReactDOM.createPortal(this.props.children, this.el);
+    return (
+      this.state.mounted && (
+        <Portal node={document && document.getElementById('menu-root')}>
+          <div>{this.props.children}</div>
+        </Portal>
+      )
+    );
   }
 }
 
@@ -38,26 +39,84 @@ class Burger extends React.Component {
   }
 
   render() {
+    const { active } = this.state;
     return (
       <div>
         <div
-          className={`${styles.navTrigger} ${this.state.active &&
-            styles.active}`}
+          className={`${styles.navTrigger} ${active && styles.active}`}
           onClick={this.toggleMenuState}
         >
           <i />
           <i />
           <i />
         </div>
-        <Menu>
-          <div
-            className={`${styles.menu} ${this.state.active && styles.active}`}
-          >
-            <p>Test</p>
-            <p>Test2</p>
-            <p>Test3</p>
+        <MenuPortal>
+          <div className={`${styles.menu} ${active && styles.active}`}>
+            <Link
+              onClick={this.toggleMenuState}
+              className={styles.link}
+              to="home"
+              smooth="easeInOutQuint"
+              offset={-60}
+              spy
+            >
+              <span className={styles.linkText}>HOME</span>
+            </Link>
+            <Link
+              onClick={this.toggleMenuState}
+              className={styles.link}
+              to="about"
+              smooth="easeInOutQuint"
+              offset={-60}
+              spy
+            >
+              <span className={styles.linkText}>ABOUT</span>
+            </Link>
+            <Link
+              onClick={this.toggleMenuState}
+              className={styles.link}
+              to="achievements"
+              smooth="easeInOutQuint"
+              offset={-60}
+              spy
+            >
+              <span className={styles.linkText}>ACHIEVEMENTS</span>
+            </Link>
+            <Link
+              onClick={this.toggleMenuState}
+              className={styles.link}
+              to="work"
+              smooth="easeInOutQuint"
+              offset={-60}
+              spy
+            >
+              <span className={styles.linkText}>WORK</span>
+            </Link>
+            <Link
+              onClick={this.toggleMenuState}
+              className={styles.link}
+              to="skills"
+              smooth="easeInOutQuint"
+              offset={-60}
+              spy
+            >
+              <span className={styles.linkText}>SKILLS</span>
+            </Link>
+            <Link
+              onClick={this.toggleMenuState}
+              className={styles.link}
+              to="contactme"
+              smooth="easeInOutQuint"
+              offset={-60}
+              spy
+            >
+              <span className={styles.linkText}>CONTACT ME</span>
+            </Link>
           </div>
-        </Menu>
+        </MenuPortal>
+        <MenuPortal>
+          <div className={`${styles.backdrop} ${active && styles.active}`} />
+        </MenuPortal>
       </div>
     );
   }

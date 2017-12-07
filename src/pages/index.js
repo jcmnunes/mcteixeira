@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import { Element } from 'react-scroll';
+import Hero from '../components/Hero';
 import styles from './index.module.css';
 
 const IndexPage = () => (
   <div style={{ marginTop: '60px' }}>
     <Element name="home" className={styles.test}>
-      <h1>Home</h1>
+      <Hero />
     </Element>
     <Element name="about" className={styles.test}>
       <h1>ABOUT</h1>
