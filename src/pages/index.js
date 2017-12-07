@@ -4,22 +4,24 @@ import { Element } from 'react-scroll';
 import styles from './index.module.css';
 
 const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-    <Element name="test1" className={styles.test}>
-      <h1>Section 1</h1>
+  <div style={{ marginTop: '60px' }}>
+    <Element name="home" className={styles.test}>
+      <h1>Home</h1>
     </Element>
-    <Element name="test2" className={styles.test}>
-      <h1>Section 2</h1>
+    <Element name="about" className={styles.test}>
+      <h1>ABOUT</h1>
     </Element>
-    <Element name="test3" className={styles.test}>
-      <h1>Section 3</h1>
+    <Element name="achievements" className={styles.test}>
+      <h1>ACHIEVEMENTS</h1>
     </Element>
-    <Element name="test4" className={styles.test}>
-      <h1>Section 4</h1>
+    <Element name="work" className={styles.test}>
+      <h1>WORK</h1>
+    </Element>
+    <Element name="skills" className={styles.test}>
+      <h1>SKILLS</h1>
+    </Element>
+    <Element name="contactme" className={styles.test}>
+      <h1>CONTACT ME</h1>
     </Element>
   </div>
 );

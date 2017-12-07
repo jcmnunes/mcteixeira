@@ -25,6 +25,7 @@ const TemplateWrapper = ({ children }) => (
     >
       {children()}
     </div>
+    <div id="menu-root" />
   </div>
 );
 
