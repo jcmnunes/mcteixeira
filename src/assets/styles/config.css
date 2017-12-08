@@ -1,6 +1,7 @@
 :root {
   --blue: #09c;
   --white: #fff;
+  --text: #292f33;
 
   @custom-media --large-viewport (min-width: 1400px);
   @custom-media --small-viewport (min-width: 940px);

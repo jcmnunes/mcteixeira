@@ -1,3 +1,5 @@
+@import "./config.css";
+
 /* nunito-regular - latin */
 @font-face {
   font-family: 'Nunito';
@@ -42,4 +44,5 @@
 
 body {
   margin: 0;
+  color: color(var(--text) tint(20%));
 }
