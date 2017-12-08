@@ -49,6 +49,7 @@
 }
 
 .menu {
+  display: block;
   position: fixed;
   top: 60px;
   right: -300px;
@@ -79,6 +80,7 @@
 }
 
 .backdrop {
+  display: block;
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -101,6 +103,14 @@
   }
 
   .navTrigger {
+    display: none;
+  }
+
+  .backdrop {
+    display: none;
+  }
+
+  .menu {
     display: none;
   }
 }

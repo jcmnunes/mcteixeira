@@ -8,22 +8,25 @@
 
 .heroText {
   position: absolute;
-  left: 100px;
+  left: 10vw;
   top: 50%;
   transform: translateY(-70%);
 
   .header {
     opacity: 0;
     transform: translateY(-20%);
-    font-size: 34px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--blue);
   }
 
   .text {
+    display: none;
     opacity: 0;
     margin-top: 20px;
     max-width: 300px;
+    font-size: 16px;
+    font-size: 1.5vw;
   }
 
   .btn {
@@ -64,6 +67,71 @@
       animation-fill-mode: forwards;
       animation-delay: 0.7s;
     }
+  }
+}
+
+.heroImage {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 5vw;
+  width: 50vw;
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  &.imageLoaded {
+    opacity: 1;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.canvas {
+  max-height: 60vw !important;
+  background: #e6e6e6;
+}
+
+@media (--smaller-viewport) {
+  .heroText {
+    .header {
+      font-size: 3vw;
+    }
+
+    .text {
+      display: block;
+    }
+  }
+}
+
+@media (--small-viewport) {
+  .heroText {
+    .header {
+      font-size: 34px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+  }
+
+  .heroImage {
+    width: 580px;
+  }
+
+  .canvas {
+    max-height: 700px !important;
+  }
+}
+
+@media (--large-viewport) {
+  .heroText {
+    left: 15vw;
+  }
+
+  .heroImage {
+    right: 15vw;
   }
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-// import Granim from '../common/Granim';
 import Particles from 'react-particles-js';
 // import PropTypes from 'prop-types';
 import styles from './Hero.module.scss';
@@ -10,28 +9,22 @@ import styles from './Hero.module.scss';
 class Hero extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { textVisible: false };
+    this.state = { textVisible: false, imageLoaded: false };
+    this.handleImageLoaded = this.handleImageLoaded.bind(this);
   }
 
   componentDidMount() {
-    this.setState({ textVisible: true });
+    this.setState({ textVisible: true, imageLoaded: true });
+  }
+
+  handleImageLoaded() {
+    this.setState({ imageLoaded: true });
   }
 
   render() {
-    const { textVisible } = this.state;
+    const { textVisible, imageLoaded } = this.state;
     return (
       <div className={styles.root}>
-        {/* <Granim
-          opacity={[0.3, 0.5]}
-          direction="top-bottom"
-          states={{
-            'default-state': {
-              gradients: [['#eee', '#4A4A4A'], ['#4A4A4A', '#eee']],
-              transitionSpeed: 5000,
-              loop: true,
-            },
-          }}
-        /> */}
         <Particles
           width="100%"
           height="100vh"
@@ -145,10 +138,11 @@ class Hero extends React.Component {
             },
             retina_detect: true,
           }}
-          style={{
-            background: '#e6e6e6',
-            maxHeight: '700px',
-          }}
+          canvasClassName={styles.canvas}
+          // style={{
+          //   background: '#e6e6e6',
+          //   maxHeight: '700px',
+          // }}
         />
         <div className={`${styles.heroText} ${textVisible && styles.visible}`}>
           <div className={styles.header}>
@@ -161,6 +155,16 @@ class Hero extends React.Component {
             auctor.
           </div>
           <button className={styles.btn}>About Me</button>
+        </div>
+        <div
+          className={`${styles.heroImage} ${imageLoaded && styles.imageLoaded}`}
+        >
+          <img
+            src={require('./images/hero.png')}
+            alt="hero"
+            onLoad={this.handleImageLoaded}
+            // style={{ width: '100%' }}
+          />
         </div>
       </div>
     );
