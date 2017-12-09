@@ -1,0 +1,16 @@
+@import "../assets/styles/config.css";
+
+.workContainer {
+  position: relative;
+  width: 100%;
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+@media (--smaller-viewport) {
+  .workContainer {
+    display: flex;
+  }
+}

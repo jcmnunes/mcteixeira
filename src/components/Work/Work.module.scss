@@ -1,18 +1,58 @@
-.thumbnail {
-  width: 290px;
-  height: 200px;
-  overflow: hidden;
+@import "../../assets/styles/config.css";
 
-  img {
-    max-width: 100%;
-    height: auto;
-    transform: scale(1);
-    transition: all .3s ease-in-out;
+.work {
+  position: relative;
+  width: 100%;
+
+  .thumbnail {
+    width: 100%;
+    height: 62.5%;
+    overflow: hidden;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      transform: scale(1);
+      transition: all .3s ease-in-out;
+    }
+  
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
   }
 
-  &:hover {
-    img {
-      transform: scale(1.2);
+  .title {
+    display: flex;
+
+    h4 {
+      flex: 1;
     }
+
+    .likesContainer {
+      display: flex;
+      align-items: center;
+
+      .likes {
+        margin-left: 1rem;
+        color: color(var(--text) tint(40%));
+      }
+    }
+  }
+}
+
+
+@media (--tiny-viewport) {
+  .work {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (--smaller-viewport) {
+  .work {
+    width: 31%;
+    margin: 0;
   }
 }

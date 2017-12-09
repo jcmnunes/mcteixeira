@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import Achievements from '../components/Achievements';
 import Work from '../components/Work';
 import { Hex } from '../components/icons';
+import styles from './index.module.scss';
+import workData from '../data/work';
 
 const IndexPage = () => (
   <div style={{ marginTop: '60px' }}>
@@ -67,7 +69,9 @@ const IndexPage = () => (
         Maecenas massa nunc. Ut egestas auctor felis, rhoncus ornare orci
         lacinia a. Proin blandit lorem finibus tincidunt.
       </p>
-      <Work />
+      <div className={styles.workContainer}>
+        {workData.map(data => <Work key={data.key} data={data} />)}
+      </div>
     </Element>
     <Element name="skills" className="section-wrapper">
       <h1>SKILLS</h1>
