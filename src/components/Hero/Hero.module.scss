@@ -16,7 +16,7 @@
     opacity: 0;
     transform: translateY(-20%);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--blue);
   }
 
@@ -93,6 +93,14 @@
   background: #e6e6e6;
 }
 
+@media (--tiny-viewport) {
+  .heroText {
+    .header {
+      font-size: 3vw;
+    }
+  }
+}
+
 @media (--smaller-viewport) {
   .heroText {
     .header {
@@ -125,7 +133,7 @@
   }
 }
 
-@media (--large-viewport) {
+@media (--larger-viewport) {
   .heroText {
     left: 15vw;
   }

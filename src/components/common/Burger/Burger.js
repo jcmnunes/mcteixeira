@@ -1,6 +1,7 @@
 import React from 'react';
 import { Portal } from 'react-portal';
 import { Link } from 'react-scroll';
+import config from '../../../data/config.json';
 import styles from './Burger.module.scss';
 
 class MenuPortal extends React.Component {
@@ -27,7 +28,7 @@ class MenuPortal extends React.Component {
 /**
  * Burger component
  */
-class Burger extends React.Component {
+export default class Burger extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false };
@@ -57,7 +58,7 @@ class Burger extends React.Component {
               className={styles.link}
               to="home"
               smooth="easeInOutQuint"
-              offset={-60}
+              offset={config.scrollOffset}
               spy
             >
               <span className={styles.linkText}>HOME</span>
@@ -67,7 +68,7 @@ class Burger extends React.Component {
               className={styles.link}
               to="about"
               smooth="easeInOutQuint"
-              offset={-60}
+              offset={config.scrollOffset}
               spy
             >
               <span className={styles.linkText}>ABOUT</span>
@@ -77,7 +78,7 @@ class Burger extends React.Component {
               className={styles.link}
               to="achievements"
               smooth="easeInOutQuint"
-              offset={-60}
+              offset={config.scrollOffset}
               spy
             >
               <span className={styles.linkText}>ACHIEVEMENTS</span>
@@ -87,7 +88,7 @@ class Burger extends React.Component {
               className={styles.link}
               to="work"
               smooth="easeInOutQuint"
-              offset={-60}
+              offset={config.scrollOffset}
               spy
             >
               <span className={styles.linkText}>WORK</span>
@@ -97,7 +98,7 @@ class Burger extends React.Component {
               className={styles.link}
               to="skills"
               smooth="easeInOutQuint"
-              offset={-60}
+              offset={config.scrollOffset}
               spy
             >
               <span className={styles.linkText}>SKILLS</span>
@@ -107,7 +108,7 @@ class Burger extends React.Component {
               className={styles.link}
               to="contactme"
               smooth="easeInOutQuint"
-              offset={-60}
+              offset={config.scrollOffset}
               spy
             >
               <span className={styles.linkText}>CONTACT ME</span>
@@ -121,5 +122,3 @@ class Burger extends React.Component {
     );
   }
 }
-
-export default Burger;
