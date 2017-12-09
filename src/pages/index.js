@@ -2,6 +2,7 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import Hero from '../components/Hero';
 import Achievements from '../components/Achievements';
+import Work from '../components/Work';
 import { Hex } from '../components/icons';
 
 const IndexPage = () => (
@@ -59,7 +60,14 @@ const IndexPage = () => (
       <Achievements />
     </Element>
     <Element name="work" className="section-wrapper">
-      <h1>WORK</h1>
+      <h1>My latest work</h1>
+      <p>
+        Maecenas quis justo at neque venenatis sagittis. Cras felis augue,
+        malesuada quis iaculis eu, posuere vitae ante. Etiam ut malesuada massa.
+        Maecenas massa nunc. Ut egestas auctor felis, rhoncus ornare orci
+        lacinia a. Proin blandit lorem finibus tincidunt.
+      </p>
+      <Work />
     </Element>
     <Element name="skills" className="section-wrapper">
       <h1>SKILLS</h1>
