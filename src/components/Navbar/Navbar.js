@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import config from '../../data/config.json';
 import { Logo } from '../icons';
 import Burger from '../common/Burger';
 import styles from './Navbar.module.scss';
@@ -10,6 +11,7 @@ class Navbar extends React.Component {
   }
 
   render() {
+    console.log('config', config);
     return (
       <div className={styles.root}>
         <Logo size={100} />
@@ -18,7 +20,7 @@ class Navbar extends React.Component {
             className={styles.link}
             to="home"
             smooth="easeInOutQuint"
-            offset={-60}
+            offset={config.scrollOffset}
             spy
           >
             <span className={styles.linkText}>HOME</span>
@@ -27,7 +29,7 @@ class Navbar extends React.Component {
             className={styles.link}
             to="about"
             smooth="easeInOutQuint"
-            offset={-60}
+            offset={config.scrollOffset}
             spy
           >
             <span className={styles.linkText}>ABOUT</span>
@@ -36,7 +38,8 @@ class Navbar extends React.Component {
             className={styles.link}
             to="achievements"
             smooth="easeInOutQuint"
-            offset={-60}
+            offset={config.scrollOffset}
+            onSetActive={() => console.log('active')}
             spy
           >
             <span className={styles.linkText}>ACHIEVEMENTS</span>
@@ -45,7 +48,7 @@ class Navbar extends React.Component {
             className={styles.link}
             to="work"
             smooth="easeInOutQuint"
-            offset={-60}
+            offset={config.scrollOffset}
             spy
           >
             <span className={styles.linkText}>WORK</span>
@@ -54,7 +57,7 @@ class Navbar extends React.Component {
             className={styles.link}
             to="skills"
             smooth="easeInOutQuint"
-            offset={-60}
+            offset={config.scrollOffset}
             spy
           >
             <span className={styles.linkText}>SKILLS</span>
@@ -63,7 +66,7 @@ class Navbar extends React.Component {
             className={styles.link}
             to="contactme"
             smooth="easeInOutQuint"
-            offset={-60}
+            offset={config.scrollOffset}
             spy
           >
             <span className={styles.linkText}>CONTACT ME</span>

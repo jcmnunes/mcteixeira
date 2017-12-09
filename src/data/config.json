@@ -1,0 +1,20 @@
+{
+  "scrollOffset": -120,
+  "achievements": [
+    {
+      "value": 142,
+      "title": "articles",
+      "desc": "Lorem ipsum dolor sit amet"
+    },
+    {
+      "value": 89,
+      "title": "projects",
+      "desc": "Donec ultricies iaculis nisi quis posuere. Vestibulum luctus."
+    },
+    {
+      "value": 7,
+      "title": "years of experience",
+      "desc": "Cras mollis metus sit amet cursus suscipit. Integer commodo."
+    }
+  ]
+}

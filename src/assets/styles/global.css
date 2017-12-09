@@ -42,7 +42,91 @@
   -webkit-font-smoothing: antialiased;
 }
 
+html {
+  font-size: 8px;
+}
+
 body {
   margin: 0;
   color: color(var(--text) tint(20%));
+  font-size: 1.75rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-bottom: 1px solid color(var(--text) tint(90%));
+  padding-bottom: 3rem;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+:global(.section-wrapper) {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+:global(.flex-grid) {
+  display: block;
+}
+
+:global(.col) {
+  flex: 1;
+}
+
+:global(.col1) {
+  padding: 0;
+}
+
+:global(.col2) {
+  padding: 0;
+}
+
+@media (--tiny-viewport) {
+  body {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (--smaller-viewport) {
+  :global(.flex-grid) {
+    display: flex;
+  }
+
+  :global(.col1) {
+    padding: 0 2% 0 0;
+  }
+
+  :global(.col2) {
+    padding: 0 0 0 2%;
+  }
+}
+
+@media (--larger-viewport) {
+  :global(.section-wrapper) {
+    max-width: 1020px;
+  }
 }
