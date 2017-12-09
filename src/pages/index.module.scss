@@ -9,6 +9,16 @@
   margin-top: 5rem;
 }
 
+.parallax {
+  background-image: url("../images/parallax-2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
 @media (--smaller-viewport) {
   .workContainer {
     display: flex;

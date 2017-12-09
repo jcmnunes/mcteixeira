@@ -3,6 +3,7 @@ import { Element } from 'react-scroll';
 import Hero from '../components/Hero';
 import Achievements from '../components/Achievements';
 import Work from '../components/Work';
+import Skills from '../components/Skills';
 import { Hex } from '../components/icons';
 import styles from './index.module.scss';
 import workData from '../data/work';
@@ -73,8 +74,11 @@ const IndexPage = () => (
         {workData.map(data => <Work key={data.key} data={data} />)}
       </div>
     </Element>
-    <Element name="skills" className="section-wrapper">
-      <h1>SKILLS</h1>
+    <Element name="skills" className={styles.parallax}>
+      <div className="section-wrapper">
+        <h1>SKILLS</h1>
+        <Skills />
+      </div>
     </Element>
     <Element name="contactme" className="section-wrapper">
       <h1>CONTACT ME</h1>

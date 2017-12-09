@@ -1,8 +1,9 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import AnimatedNumber from 'react-animated-number';
 import VisibilitySensor from 'react-visibility-sensor';
+import { navigateTo } from 'gatsby-link';
 import Icon from '../common/Icon';
 import config from '../../data/config.json';
 import colors from '../../assets/colors';
@@ -16,10 +17,10 @@ class Work extends React.Component {
       isOpen: false,
       value: 0,
     };
-    this.onChange = this.onChange.bind(this);
+    this.onVisibilityChange = this.onVisibilityChange.bind(this);
   }
 
-  onChange(isVisible) {
+  onVisibilityChange(isVisible) {
     if (isVisible) {
       this.setState({ value: 142 });
     } else {
@@ -31,13 +32,19 @@ class Work extends React.Component {
     const { photoIndex, isOpen } = this.state;
     const { data } = this.props;
     return (
-      <VisibilitySensor onChange={this.onChange} partialVisibility>
+      <VisibilitySensor onChange={this.onVisibilityChange} partialVisibility>
         <div className={styles.work}>
-          <div
-            className={styles.thumbnail}
-            onClick={() => this.setState({ isOpen: true })}
-          >
+          <div className={styles.thumbnail}>
             <img src={data.thumb} alt="" />
+            <div className={styles.backdrop} />
+            <div className={styles.links}>
+              <div onClick={() => this.setState({ isOpen: true })}>
+                <Icon icon="image" />
+              </div>
+              <div onClick={() => navigateTo(data.page)}>
+                <Icon icon="link" />
+              </div>
+            </div>
           </div>
 
           {isOpen && (
@@ -63,6 +70,7 @@ class Work extends React.Component {
               }
             />
           )}
+
           <div className={styles.title}>
             <h4>Aliquam eratac</h4>
             <div className={styles.likesContainer}>
@@ -92,12 +100,8 @@ class Work extends React.Component {
   }
 }
 
-// Work.defaultProps = {
-//   firstName: 'John',
-// };
-
-// Work.propTypes = {
-//   firstName: PropTypes.string.isRequired,
-// };
+Work.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default Work;

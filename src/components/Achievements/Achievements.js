@@ -41,10 +41,10 @@ class Achievements extends React.Component {
   constructor(props) {
     super(props);
     this.state = { values: config.achievements.map(() => 0) };
-    this.onChange = this.onChange.bind(this);
+    this.onVisibilityChange = this.onVisibilityChange.bind(this);
   }
 
-  onChange(isVisible) {
+  onVisibilityChange(isVisible) {
     if (isVisible) {
       this.setState({ values: config.achievements.map(a => a.value) });
     } else {
@@ -54,7 +54,7 @@ class Achievements extends React.Component {
 
   render() {
     return (
-      <VisibilitySensor onChange={this.onChange} partialVisibility>
+      <VisibilitySensor onChange={this.onVisibilityChange} partialVisibility>
         <div className="section-wrapper">
           <div className={styles.achievements}>
             <h1>My achievements</h1>

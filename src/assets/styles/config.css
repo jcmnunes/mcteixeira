@@ -8,4 +8,5 @@
   @custom-media --small-viewport (min-width: 940px);
   @custom-media --smaller-viewport (min-width: 800px);
   @custom-media --tiny-viewport (min-width: 600px);
+  @custom-media --mobile-viewport (min-width: 480px);
 }
