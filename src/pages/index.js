@@ -3,7 +3,6 @@ import { Element } from 'react-scroll';
 import Hero from '../components/Hero';
 import Achievements from '../components/Achievements';
 import { Hex } from '../components/icons';
-import styles from './index.module.css';
 
 const IndexPage = () => (
   <div style={{ marginTop: '60px' }}>
@@ -56,16 +55,16 @@ const IndexPage = () => (
         </div>
       </div>
     </Element>
-    <Element name="achievements" className={styles.test}>
+    <Element name="achievements">
       <Achievements />
     </Element>
-    <Element name="work" className={styles.test}>
+    <Element name="work" className="section-wrapper">
       <h1>WORK</h1>
     </Element>
-    <Element name="skills" className={styles.test}>
+    <Element name="skills" className="section-wrapper">
       <h1>SKILLS</h1>
     </Element>
-    <Element name="contactme" className={styles.test}>
+    <Element name="contactme" className="section-wrapper">
       <h1>CONTACT ME</h1>
     </Element>
   </div>

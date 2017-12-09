@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AnimatedNumber from 'react-animated-number';
+import VisibilitySensor from 'react-visibility-sensor';
 import config from '../../data/config.json';
+import colors from '../../assets/colors';
 import styles from './Achievements.module.scss';
 
 const Stat = ({ value, title, desc }) => (
@@ -17,9 +19,9 @@ const Stat = ({ value, title, desc }) => (
           transitionProperty: 'background-color, color, opacity',
         }}
         frameStyle={perc =>
-          perc === 100 ? {} : { backgroundColor: '#ffeb3b' }
+          perc === 100 ? {} : { backgroundColor: colors.blue80 }
         }
-        duration={3000}
+        duration={config.numberAnimDuration}
         stepPrecision={0}
       />
     </div>
@@ -38,26 +40,37 @@ Stat.propTypes = {
 class Achievements extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: 0 };
-    this.handleClick = this.handleClick.bind(this);
+    this.state = { values: config.achievements.map(() => 0) };
+    this.onChange = this.onChange.bind(this);
   }
 
-  handleClick() {
-    this.setState({ value: 120 });
+  onChange(isVisible) {
+    if (isVisible) {
+      this.setState({ values: config.achievements.map(a => a.value) });
+    } else {
+      this.setState({ values: config.achievements.map(() => 0) });
+    }
   }
 
   render() {
     return (
-      <div className="section-wrapper">
-        <div className={styles.achievements} onClick={this.handleClick}>
-          <h1>My achievements</h1>
+      <VisibilitySensor onChange={this.onChange} partialVisibility>
+        <div className="section-wrapper">
+          <div className={styles.achievements}>
+            <h1>My achievements</h1>
+          </div>
+          <div className={styles.stats}>
+            {config.achievements.map(({ title, desc }, index) => (
+              <Stat
+                key={title}
+                value={this.state.values[index]}
+                title={title}
+                desc={desc}
+              />
+            ))}
+          </div>
         </div>
-        <div className={styles.stats}>
-          {config.achievements.map(({ value, title, desc }) => (
-            <Stat key={title} value={value} title={title} desc={desc} />
-          ))}
-        </div>
-      </div>
+      </VisibilitySensor>
     );
   }
 }
