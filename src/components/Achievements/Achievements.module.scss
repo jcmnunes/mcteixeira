@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: flex-start;
   flex: 1;
-  margin: 0;
+  margin: 0 0 2rem;
 
   .value {
     width: 100%;
@@ -50,6 +50,10 @@
   .stats {
     display: block;
     padding: 15%;
+  }
+
+  .desc {
+    margin: 0 3rem;
   }
 }
 

@@ -40,6 +40,7 @@ class Navbar extends React.Component {
             smooth="easeInOutQuint"
             offset={config.scrollOffset}
             onSetActive={() => console.log('active')}
+            onSetInactive={() => console.log('inactive')}
             spy
           >
             <span className={styles.linkText}>ACHIEVEMENTS</span>
