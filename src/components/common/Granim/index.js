@@ -27,6 +27,23 @@ export default class GranimComp extends Component {
     defaultStateName: 'default-state',
   };
 
+  static get style() {
+    return {
+      position: 'absolute',
+      display: 'block',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    };
+  }
+
+  componentDidMount() {
+    this.granim = new Granim(Object.assign({}, this.config, this.props));
+  }
+
   get config() {
     // default
     return {
@@ -48,25 +65,8 @@ export default class GranimComp extends Component {
     };
   }
 
-  get style() {
-    return {
-      position: 'absolute',
-      display: 'block',
-      width: '100%',
-      height: '100%',
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-    };
-  }
-
-  componentDidMount() {
-    this.granim = new Granim(Object.assign({}, this.config, this.props));
-  }
-
   render() {
     const { id, style } = this.props;
-    return <canvas id={id} style={style || this.style} />;
+    return <canvas id={id} style={style || GranimComp.style} />;
   }
 }
