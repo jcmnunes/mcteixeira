@@ -9,7 +9,7 @@ import styles from './index.module.scss';
 import workData from '../data/work';
 
 const IndexPage = () => (
-  <div style={{ marginTop: '60px' }}>
+  <div id="index-root" style={{ marginTop: '60px' }}>
     <Element name="home">
       <Hero />
     </Element>

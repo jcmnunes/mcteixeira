@@ -1,0 +1,192 @@
+@keyframes uil-default-anim {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.spinner {
+  position: relative;
+  background: none;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+
+  &.medium {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.small {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.spinner div {
+  top: 12px;
+  left: 15px;
+  width: 3px;
+  height: 8px;
+  border-radius: 1.5px;
+  position: absolute;
+}
+
+.spinner.medium div {
+  top: 9px;
+  left: 11.25px;
+  width: 2px;
+  height: 6px;
+  border-radius: 1.125px;
+}
+
+.spinner.small div {
+  top: 6px;
+  left: 7.5px;
+  width: 1px;
+  height: 4px;
+  border-radius: 0.75px;
+}
+
+.spinner > div:nth-of-type(1) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -1s;
+  transform: rotate(0deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(1) {
+  transform: rotate(0deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(1) {
+  transform: rotate(0deg) translate(0, -4.8px);
+}
+
+.spinner > div:nth-of-type(2) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -0.9s;
+  transform: rotate(36deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(2) {
+  transform: rotate(36deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(2) {
+  transform: rotate(36deg) translate(0, -4.8px);
+}
+
+.spinner > div:nth-of-type(3) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -0.8s;
+  transform: rotate(72deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(3) {
+  transform: rotate(72deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(3) {
+  transform: rotate(72deg) translate(0, -4.8px);
+}
+
+.spinner > div:nth-of-type(4) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -0.7s;
+  transform: rotate(108deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(4) {
+  transform: rotate(108deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(4) {
+  transform: rotate(108deg) translate(0, -4.8px);
+}
+
+.spinner > div:nth-of-type(5) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -0.6s;
+  transform: rotate(144deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(5) {
+  transform: rotate(144deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(5) {
+  transform: rotate(144deg) translate(0, -4.8px);
+}
+
+.spinner > div:nth-of-type(6) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -0.5s;
+  transform: rotate(180deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(6) {
+  transform: rotate(180deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(6) {
+  transform: rotate(180deg) translate(0, -4.8px);
+}
+
+.spinner > div:nth-of-type(7) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -0.4s;
+  transform: rotate(216deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(7) {
+  transform: rotate(216deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(7) {
+  transform: rotate(216deg) translate(0, -4.8px);
+}
+
+.spinner > div:nth-of-type(8) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -0.3s;
+  transform: rotate(252deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(8) {
+  transform: rotate(252deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(8) {
+  transform: rotate(252deg) translate(0, -4.8px);
+}
+
+.spinner > div:nth-of-type(9) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -0.2s;
+  transform: rotate(288deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(9) {
+  transform: rotate(288deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(9) {
+  transform: rotate(288deg) translate(0, -4.8px);
+}
+
+.spinner > div:nth-of-type(10) {
+  animation: uil-default-anim 1s linear infinite;
+  animation-delay: -0.1s;
+  transform: rotate(324deg) translate(0, -9.6px);
+}
+
+.spinner.medium > div:nth-of-type(10) {
+  transform: rotate(324deg) translate(0, -7.2px);
+}
+
+.spinner.small > div:nth-of-type(10) {
+  transform: rotate(324deg) translate(0, -4.8px);
+}

@@ -1,12 +1,22 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import { scroller } from 'react-scroll';
+import config from '../../data/config.json';
 // import PropTypes from 'prop-types';
+import Button from '../common/Button';
 import styles from './Hero.module.scss';
 
 /**
  * Hero
  */
 class Hero extends React.Component {
+  static goToAbout() {
+    scroller.scrollTo('about', {
+      smooth: 'easeInOutQuint',
+      offset: config.scrollOffset,
+    });
+  }
+
   constructor(props) {
     super(props);
     this.state = { textVisible: false, imageLoaded: false };
@@ -154,7 +164,12 @@ class Hero extends React.Component {
             Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
             auctor.
           </div>
-          <button className={styles.btn}>About Me</button>
+          <div className={styles.btn}>
+            <Button small onClick={Hero.goToAbout}>
+              ABOUT ME
+            </Button>
+            <Button onClick={Hero.goToAbout}>ABOUT ME</Button>
+          </div>
         </div>
         <div
           className={`${styles.heroImage} ${imageLoaded && styles.imageLoaded}`}

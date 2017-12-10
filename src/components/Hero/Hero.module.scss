@@ -31,13 +31,7 @@
 
   .btn {
     opacity: 0;
-    background: black;
-    color: white;
-    padding: 12px;
     margin-top: 20px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
   }
 
   &.visible {
@@ -93,6 +87,14 @@
   background: #e6e6e6;
 }
 
+button:first-child {
+  display: inline-block;
+}
+
+button:last-child {
+  display: none;
+}
+
 @media (--tiny-viewport) {
   .heroText {
     .header {
@@ -110,6 +112,14 @@
     .text {
       display: block;
     }
+  }
+
+  button:first-child {
+    display: none;
+  }
+
+  button:last-child {
+    display: inline-block;
   }
 }
 
