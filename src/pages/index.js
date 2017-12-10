@@ -2,7 +2,11 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import Hero from '../components/Hero';
 import Achievements from '../components/Achievements';
+import Work from '../components/Work';
+import Skills from '../components/Skills';
 import { Hex } from '../components/icons';
+import styles from './index.module.scss';
+import workData from '../data/work';
 
 const IndexPage = () => (
   <div style={{ marginTop: '60px' }}>
@@ -59,10 +63,22 @@ const IndexPage = () => (
       <Achievements />
     </Element>
     <Element name="work" className="section-wrapper">
-      <h1>WORK</h1>
+      <h1>My latest work</h1>
+      <p>
+        Maecenas quis justo at neque venenatis sagittis. Cras felis augue,
+        malesuada quis iaculis eu, posuere vitae ante. Etiam ut malesuada massa.
+        Maecenas massa nunc. Ut egestas auctor felis, rhoncus ornare orci
+        lacinia a. Proin blandit lorem finibus tincidunt.
+      </p>
+      <div className={styles.workContainer}>
+        {workData.map(data => <Work key={data.key} data={data} />)}
+      </div>
     </Element>
-    <Element name="skills" className="section-wrapper">
-      <h1>SKILLS</h1>
+    <Element name="skills" className={styles.parallax}>
+      <div className="section-wrapper">
+        <h1>SKILLS</h1>
+        <Skills />
+      </div>
     </Element>
     <Element name="contactme" className="section-wrapper">
       <h1>CONTACT ME</h1>

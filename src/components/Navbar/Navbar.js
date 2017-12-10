@@ -49,7 +49,8 @@ const Navbar = () => (
         className={styles.link}
         to="skills"
         smooth="easeInOutQuint"
-        offset={config.scrollOffset}
+        // offset={config.scrollOffset}
+        offset={-60}
         spy
       >
         <span className={styles.linkText}>SKILLS</span>
