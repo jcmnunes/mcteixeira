@@ -73,9 +73,13 @@ class Work extends React.Component {
 
           <div className={styles.title}>
             <h4>Aliquam eratac</h4>
-            <div className={styles.likesContainer}>
-              <Icon icon="heart" color="black" spin={false} />
-              <span className={styles.likes}>
+            <div
+              className={styles.likesContainer}
+              onClick={() => navigateTo(data.page)}
+            >
+              <Icon icon="circleRight" color={colors.text20} spin={false} />
+              {/* <Icon icon="heart" color="black" spin={false} /> */}
+              {/* <span className={styles.likes}>
                 <AnimatedNumber
                   component="span"
                   value={this.state.value}
@@ -91,7 +95,7 @@ class Work extends React.Component {
                   duration={config.numberAnimDuration}
                   stepPrecision={0}
                 />
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
