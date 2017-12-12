@@ -19,20 +19,15 @@ class Hero extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { textVisible: false, imageLoaded: false };
-    this.handleImageLoaded = this.handleImageLoaded.bind(this);
+    this.state = { textVisible: false };
   }
 
   componentDidMount() {
-    this.setState({ textVisible: true, imageLoaded: true });
-  }
-
-  handleImageLoaded() {
-    this.setState({ imageLoaded: true });
+    this.setState({ textVisible: true });
   }
 
   render() {
-    const { textVisible, imageLoaded } = this.state;
+    const { textVisible } = this.state;
     return (
       <div className={styles.root}>
         <Particles
