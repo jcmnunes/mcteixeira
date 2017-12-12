@@ -2,7 +2,7 @@ import React from 'react';
 import Particles from 'react-particles-js';
 import { scroller } from 'react-scroll';
 import config from '../../data/config.json';
-import particles from '../../data/particlesjs-config2.json';
+import particles from '../../data/particlesjs-config.json';
 import Button from '../common/Button';
 import styles from './Hero.module.scss';
 
@@ -57,15 +57,6 @@ class Hero extends React.Component {
             </Button>
             <Button onClick={Hero.goToAbout}>ABOUT ME</Button>
           </div>
-        </div>
-        <div
-          className={`${styles.heroImage} ${imageLoaded && styles.imageLoaded}`}
-        >
-          <img
-            src={require('./images/hero.png')}
-            alt="hero"
-            onLoad={this.handleImageLoaded}
-          />
         </div>
       </div>
     );
