@@ -2,7 +2,7 @@ import React from 'react';
 import Particles from 'react-particles-js';
 import { scroller } from 'react-scroll';
 import config from '../../data/config.json';
-import particles from '../../data/particlesjs-config2.json';
+import particles from '../../data/particlesjs-config.json';
 import Button from '../common/Button';
 import styles from './Hero.module.scss';
 
@@ -19,20 +19,15 @@ class Hero extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { textVisible: false, imageLoaded: false };
-    this.handleImageLoaded = this.handleImageLoaded.bind(this);
+    this.state = { textVisible: false };
   }
 
   componentDidMount() {
-    this.setState({ textVisible: true, imageLoaded: true });
-  }
-
-  handleImageLoaded() {
-    this.setState({ imageLoaded: true });
+    this.setState({ textVisible: true });
   }
 
   render() {
-    const { textVisible, imageLoaded } = this.state;
+    const { textVisible } = this.state;
     return (
       <div className={styles.root}>
         <Particles
@@ -57,15 +52,6 @@ class Hero extends React.Component {
             </Button>
             <Button onClick={Hero.goToAbout}>ABOUT ME</Button>
           </div>
-        </div>
-        <div
-          className={`${styles.heroImage} ${imageLoaded && styles.imageLoaded}`}
-        >
-          <img
-            src={require('./images/hero.png')}
-            alt="hero"
-            onLoad={this.handleImageLoaded}
-          />
         </div>
       </div>
     );
