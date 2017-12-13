@@ -45,7 +45,7 @@
   }
 
   &:hover {
-    background: var(--black)
+    background: var(--black);
   }
 
   &:active {

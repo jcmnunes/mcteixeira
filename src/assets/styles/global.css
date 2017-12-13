@@ -154,7 +154,7 @@ h3 {
 }
 
 .CircularProgressbar .CircularProgressbar-trail {
-  stroke: color(var(--text) tint(90%));;
+  stroke: color(var(--text) tint(90%));
 }
 
 .CircularProgressbar .CircularProgressbar-text {
@@ -165,7 +165,7 @@ h3 {
 }
 
 .CircularProgressbar .CircularProgressbar-background {
-  fill: color(var(--text) tint(90%));;
+  fill: color(var(--text) tint(90%));
 }
 
 /*

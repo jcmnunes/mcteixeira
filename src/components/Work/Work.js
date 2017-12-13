@@ -1,11 +1,9 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import PropTypes from 'prop-types';
-import AnimatedNumber from 'react-animated-number';
 import VisibilitySensor from 'react-visibility-sensor';
 import { navigateTo } from 'gatsby-link';
 import Icon from '../common/Icon';
-import config from '../../../data/config.json';
 import colors from '../../assets/colors';
 import styles from './Work.module.css';
 
@@ -15,17 +13,7 @@ class Work extends React.Component {
     this.state = {
       photoIndex: 0,
       isOpen: false,
-      value: 0,
     };
-    this.onVisibilityChange = this.onVisibilityChange.bind(this);
-  }
-
-  onVisibilityChange(isVisible) {
-    if (isVisible) {
-      this.setState({ value: 142 });
-    } else {
-      this.setState({ value: 0 });
-    }
   }
 
   render() {
@@ -78,24 +66,6 @@ class Work extends React.Component {
               onClick={() => navigateTo(data.page)}
             >
               <Icon icon="circleRight" color={colors.text20} spin={false} />
-              {/* <Icon icon="heart" color="black" spin={false} /> */}
-              {/* <span className={styles.likes}>
-                <AnimatedNumber
-                  component="span"
-                  value={this.state.value}
-                  style={{
-                    transition: '0.8s ease-out',
-                    fontSize: 16,
-                    fontWeight: 400,
-                    transitionProperty: 'background-color, color, opacity',
-                  }}
-                  frameStyle={perc =>
-                    perc === 100 ? {} : { backgroundColor: colors.blue80 }
-                  }
-                  duration={config.numberAnimDuration}
-                  stepPrecision={0}
-                />
-              </span> */}
             </div>
           </div>
         </div>

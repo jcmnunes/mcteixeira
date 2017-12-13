@@ -49,7 +49,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  display: block;
   text-align: center;
   margin: 0 auto;
 
@@ -61,5 +60,5 @@
 @media (--mobile-viewport) {
   .circle {
     display: inline-block;
-  } 
+  }
 }

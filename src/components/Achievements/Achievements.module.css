@@ -65,17 +65,17 @@
 
   .statRoot {
     margin: 4rem 2rem;
-  }  
+  }
 }
 
 @media (--large-viewport) {
   .statRoot {
     margin: 5rem;
-  }  
+  }
 }
 
 @media (--larger-viewport) {
   .statRoot {
     margin: 6rem;
-  }  
+  }
 }
