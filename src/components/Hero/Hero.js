@@ -28,28 +28,15 @@ class Hero extends React.Component {
 
   render() {
     const { textVisible } = this.state;
-    console.log(window && window.innerWidth ? 0.2 * window.innerWidth : 160);
     return (
       <div className={styles.root}>
-        {/* <Particles
-          width="100%"
-          height="100vh"
-          params={{
-            ...particles,
-            size: {
-              ...particles.size,
-              value:
-                window && window.innerWidth ? 0.2 * window.innerWidth : 160,
-            },
-          }}
-          canvasClassName={styles.canvas}
-        /> */}
         <Particles
           width="100%"
           height="100vh"
           params={particles}
-          canvasClassName={styles.canvas}
+          canvasClassName={`${styles.hero} ${styles.canvas}`}
         />
+        <div className={styles.hero} />
         <div className={`${styles.heroText} ${textVisible && styles.visible}`}>
           <div className={styles.header}>
             HELLO<br />
