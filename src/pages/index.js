@@ -5,8 +5,8 @@ import Achievements from '../components/Achievements';
 import Work from '../components/Work';
 import Skills from '../components/Skills';
 import { Hex } from '../components/icons';
-import styles from './index.module.scss';
-import workData from '../data/work';
+import styles from './index.module.css';
+import workData from '../../data/work';
 
 const IndexPage = () => (
   <div id="index-root" style={{ marginTop: '60px' }}>

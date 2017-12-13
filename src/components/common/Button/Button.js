@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LoadingIndicator from './LoadingIndicator';
 import colors from '../../../assets/colors';
-import styles from './Button.module.scss';
+import styles from './Button.module.css';
 
 /**
  * Button wrapper

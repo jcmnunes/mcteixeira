@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import config from '../../data/config.json';
+import config from '../../../data/config.json';
 import { Logo } from '../icons';
 import Burger from '../common/Burger';
-import styles from './Navbar.module.scss';
+import styles from './Navbar.module.css';
 
 const Navbar = () => (
   <div className={styles.root}>

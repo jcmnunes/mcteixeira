@@ -17,7 +17,7 @@
   opacity: 0;
   transition: opacity 0.5s ease;
 
-  .header {
+  & .header {
     opacity: 0;
     transform: translateY(-20%);
     font-size: 16px;
@@ -26,7 +26,7 @@
     text-align: center;
   }
 
-  .text {
+  & .text {
     display: none;
     opacity: 0;
     margin-top: 20px;
@@ -35,7 +35,7 @@
     font-size: 1.5vw;
   }
 
-  .btn {
+  & .btn {
     opacity: 0;
     margin-top: 20px;
     text-align: center;
@@ -44,7 +44,7 @@
   &.visible {
     opacity: 1;
 
-    .header {
+    & .header {
       transform: translateY(20px);
       animation-name: slideTop;
       animation-duration: 0.4s;
@@ -53,7 +53,7 @@
       animation-delay: 0.5s;
     }
 
-    .text {
+    & .text {
       transform: translateY(20px);
       animation-name: slideTop;
       animation-duration: 0.4s;
@@ -62,7 +62,7 @@
       animation-delay: 0.6s;
     }
 
-    .btn {
+    & .btn {
       transform: translateY(20px);
       animation-name: slideTop;
       animation-duration: 0.4s;
@@ -74,8 +74,9 @@
 }
 
 .canvas {
+  height: calc(100vh - 60px) !important;
   max-height: 60vw !important;
-  background: var(--dark-blue);
+  background: var(--blue);
 }
 
 button:first-child {
@@ -92,7 +93,7 @@ button:last-child {
   }
 
   .heroText {
-    .header {
+    & .header {
       font-size: 3vw;
     }
   }
@@ -100,11 +101,11 @@ button:last-child {
 
 @media (--smaller-viewport) {
   .heroText {
-    .header {
+    & .header {
       font-size: 3vw;
     }
 
-    .text {
+    & .text {
       display: block;
     }
   }
@@ -120,11 +121,11 @@ button:last-child {
 
 @media (--small-viewport) {
   .heroText {
-    .header {
+    & .header {
       font-size: 34px;
     }
 
-    .text {
+    & .text {
       font-size: 16px;
     }
   }

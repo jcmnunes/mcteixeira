@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AnimatedNumber from 'react-animated-number';
 import VisibilitySensor from 'react-visibility-sensor';
-import config from '../../data/config.json';
+import config from '../../../data/config.json';
 import colors from '../../assets/colors';
-import styles from './Achievements.module.scss';
+import styles from './Achievements.module.css';
 
 const Stat = ({ value, title, desc }) => (
   <div className={styles.statRoot}>

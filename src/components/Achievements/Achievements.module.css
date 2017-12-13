@@ -7,7 +7,7 @@
   text-align: center;
   margin: 8rem 0 0 0;
 
-  h1 {
+  & h1 {
     border-bottom: none;
     line-height: 130px;
     margin: 0;
@@ -30,29 +30,29 @@
   flex: 1;
   margin: 0 0 2rem;
 
-  .value {
+  & .value {
     width: 100%;
     text-align: center;
   }
 
-  .title {
+  & .title {
     color: var(--blue);
     font-weight: 600;
     font-size: 2.5rem;
   }
 
-  .desc {
+  & .desc {
     text-align: center;
   }
 }
 
 @media (--tiny-viewport) {
-  .stats {
+  & .stats {
     display: block;
     padding: 15%;
   }
 
-  .desc {
+  & .desc {
     margin: 0 3rem;
   }
 }

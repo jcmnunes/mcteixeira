@@ -5,9 +5,9 @@ import AnimatedNumber from 'react-animated-number';
 import VisibilitySensor from 'react-visibility-sensor';
 import { navigateTo } from 'gatsby-link';
 import Icon from '../common/Icon';
-import config from '../../data/config.json';
+import config from '../../../data/config.json';
 import colors from '../../assets/colors';
-import styles from './Work.module.scss';
+import styles from './Work.module.css';
 
 class Work extends React.Component {
   constructor(props) {

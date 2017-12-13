@@ -4,11 +4,11 @@
       "value": 6,
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area": 1600
       }
     },
     "color": {
-      "value": "#1b1e34"
+      "value": "#AEECEF"
     },
     "shape": {
       "type": "polygon",
@@ -18,11 +18,6 @@
       },
       "polygon": {
         "nb_sides": 6
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
       }
     },
     "opacity": {
@@ -36,10 +31,10 @@
       }
     },
     "size": {
-      "value": 160,
+      "value": 120,
       "random": false,
       "anim": {
-        "enable": true,
+        "enable": false,
         "speed": 10,
         "size_min": 40,
         "sync": false
@@ -54,11 +49,11 @@
     },
     "move": {
       "enable": true,
-      "speed": 8,
+      "speed": 4,
       "direction": "none",
       "random": false,
       "straight": false,
-      "out_mode": "out",
+      "out_mode": "bounce",
       "bounce": false,
       "attract": {
         "enable": false,

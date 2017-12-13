@@ -1,10 +1,10 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import { scroller } from 'react-scroll';
-import config from '../../data/config.json';
-import particles from '../../data/particlesjs-config.json';
+import config from '../../../data/config.json';
+import particles from '../../../data/particlesjs-config.json';
 import Button from '../common/Button';
-import styles from './Hero.module.scss';
+import styles from './Hero.module.css';
 
 /**
  * Hero
@@ -28,8 +28,22 @@ class Hero extends React.Component {
 
   render() {
     const { textVisible } = this.state;
+    console.log(window && window.innerWidth ? 0.2 * window.innerWidth : 160);
     return (
       <div className={styles.root}>
+        {/* <Particles
+          width="100%"
+          height="100vh"
+          params={{
+            ...particles,
+            size: {
+              ...particles.size,
+              value:
+                window && window.innerWidth ? 0.2 * window.innerWidth : 160,
+            },
+          }}
+          canvasClassName={styles.canvas}
+        /> */}
         <Particles
           width="100%"
           height="100vh"
