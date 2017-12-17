@@ -1,7 +1,12 @@
 :root {
   --blue: #09c;
+  --dark-blue: #004777;
+  --light-blue: #b9d6f2;
+  --yellow: #f9dc5c;
+  --red: #FF005c;
   --white: #fff;
   --text: #292f33;
+  --black: #000;
 
   @custom-media --larger-viewport (min-width: 1400px);
   @custom-media --large-viewport (min-width: 1050px);

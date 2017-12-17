@@ -1,8 +1,8 @@
 import React from 'react';
 import { Portal } from 'react-portal';
 import { Link } from 'react-scroll';
-import config from '../../../data/config.json';
-import styles from './Burger.module.scss';
+import config from '../../../../data/config.json';
+import styles from './Burger.module.css';
 
 class MenuPortal extends React.Component {
   constructor(props) {

@@ -27,15 +27,14 @@
     "redux": "^3.7.2",
     "reset-css": "^2.2.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "lint": "eslint src --fix",
+    "slint": "stylelint \"src/**/*.css\" --fix --config .stylelintrc",
     "colors": "babel-node tools/colors/colors.js"
   },
   "devDependencies": {
@@ -47,6 +46,10 @@
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.5.1",
     "prettier": "^1.9.1",
-    "redux-devtools-extension": "^2.13.2"
+    "redux-devtools-extension": "^2.13.2",
+    "stylelint": "^8.3.1",
+    "stylelint-config-css-modules": "^1.1.0",
+    "stylelint-config-standard": "^18.0.0",
+    "stylelint-declaration-strict-value": "^1.0.4"
   }
 }

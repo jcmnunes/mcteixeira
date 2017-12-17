@@ -3,24 +3,38 @@
 .root {
   position: relative;
   width: 100%;
-  background: #fff;
+  background: var(--white);
+
+  & button:first-child {
+    display: inline-block;
+  }
+
+  & button:last-child {
+    display: none;
+  }
 }
 
 .heroText {
   position: absolute;
-  left: 10vw;
+  left: 50%;
   top: 50%;
-  transform: translateY(-70%);
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  background-color: var(--white);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
 
-  .header {
+  & .header {
     opacity: 0;
     transform: translateY(-20%);
     font-size: 16px;
     font-weight: 700;
     color: var(--blue);
+    text-align: center;
   }
 
-  .text {
+  & .text {
     display: none;
     opacity: 0;
     margin-top: 20px;
@@ -29,19 +43,16 @@
     font-size: 1.5vw;
   }
 
-  .btn {
+  & .btn {
     opacity: 0;
-    background: black;
-    color: white;
-    padding: 12px;
     margin-top: 20px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
+    text-align: center;
   }
 
   &.visible {
-    .header {
+    opacity: 1;
+
+    & .header {
       transform: translateY(20px);
       animation-name: slideTop;
       animation-duration: 0.4s;
@@ -50,7 +61,7 @@
       animation-delay: 0.5s;
     }
 
-    .text {
+    & .text {
       transform: translateY(20px);
       animation-name: slideTop;
       animation-duration: 0.4s;
@@ -59,7 +70,7 @@
       animation-delay: 0.6s;
     }
 
-    .btn {
+    & .btn {
       transform: translateY(20px);
       animation-name: slideTop;
       animation-duration: 0.4s;
@@ -70,44 +81,52 @@
   }
 }
 
-.heroImage {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 5vw;
-  width: 50vw;
-  opacity: 0;
-  transition: opacity 1s ease;
-
-  &.imageLoaded {
-    opacity: 1;
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
-.canvas {
+.hero {
+  height: calc(100vh - 60px) !important;
   max-height: 60vw !important;
-  background: #e6e6e6;
+  background: var(--blue);
+  display: block;
+
+  &.canvas {
+    display: none;
+  }
 }
 
 @media (--tiny-viewport) {
   .heroText {
-    .header {
+    padding: 5rem;
+
+    & .header {
       font-size: 3vw;
+    }
+  }
+
+  .hero {
+    display: none;
+
+    &.canvas {
+      display: block;
     }
   }
 }
 
 @media (--smaller-viewport) {
+  .root {
+    & button:first-child {
+      display: none;
+    }
+
+    & button:last-child {
+      display: inline-block;
+    }
+  }
+
   .heroText {
-    .header {
+    & .header {
       font-size: 3vw;
     }
 
-    .text {
+    & .text {
       display: block;
     }
   }
@@ -115,31 +134,17 @@
 
 @media (--small-viewport) {
   .heroText {
-    .header {
+    & .header {
       font-size: 34px;
     }
 
-    .text {
+    & .text {
       font-size: 16px;
     }
   }
 
-  .heroImage {
-    width: 580px;
-  }
-
-  .canvas {
+  .hero {
     max-height: 700px !important;
-  }
-}
-
-@media (--larger-viewport) {
-  .heroText {
-    left: 15vw;
-  }
-
-  .heroImage {
-    right: 15vw;
   }
 }
 

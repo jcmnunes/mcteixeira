@@ -4,12 +4,14 @@ import Hero from '../components/Hero';
 import Achievements from '../components/Achievements';
 import Work from '../components/Work';
 import Skills from '../components/Skills';
+import DownloadCV from '../components/DownloadCV';
+import ContactForm from '../components/ContactForm';
 import { Hex } from '../components/icons';
-import styles from './index.module.scss';
-import workData from '../data/work';
+import styles from './index.module.css';
+import workData from '../../data/work';
 
 const IndexPage = () => (
-  <div style={{ marginTop: '60px' }}>
+  <div id="index-root" style={{ marginTop: '60px' }}>
     <Element name="home">
       <Hero />
     </Element>
@@ -74,15 +76,26 @@ const IndexPage = () => (
         {workData.map(data => <Work key={data.key} data={data} />)}
       </div>
     </Element>
-    <Element name="skills" className={styles.parallax}>
-      <div className="section-wrapper">
+    <div className={styles.parallax}>
+      <Element name="skills" className="section-wrapper">
         <h1>SKILLS</h1>
         <Skills />
+      </Element>
+    </div>
+    <Element name="cv">
+      <DownloadCV />
+    </Element>
+    <Element name="contactme" className={styles.contact}>
+      <div className="section-wrapper">
+        <h1>SEND ME A MESSAGE</h1>
+        <ContactForm />
       </div>
     </Element>
-    <Element name="contactme" className="section-wrapper">
-      <h1>CONTACT ME</h1>
-    </Element>
+    <div className={`section-wrapper ${styles.footer}`}>
+      <div className={styles.footerText}>
+        © 2017 MCT - Maria Teixeira. Made by Jose Nunes (josenunes.xyz)
+      </div>
+    </div>
   </div>
 );
 

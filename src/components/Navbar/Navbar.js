@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import config from '../../data/config.json';
+import config from '../../../data/config.json';
 import { Logo } from '../icons';
 import Burger from '../common/Burger';
-import styles from './Navbar.module.scss';
+import styles from './Navbar.module.css';
 
 const Navbar = () => (
   <div className={styles.root}>
@@ -15,6 +15,7 @@ const Navbar = () => (
         smooth="easeInOutQuint"
         offset={config.scrollOffset}
         spy
+        hashSpy
       >
         <span className={styles.linkText}>HOME</span>
       </Link>
@@ -24,6 +25,7 @@ const Navbar = () => (
         smooth="easeInOutQuint"
         offset={config.scrollOffset}
         spy
+        hashSpy
       >
         <span className={styles.linkText}>ABOUT</span>
       </Link>
@@ -33,6 +35,7 @@ const Navbar = () => (
         smooth="easeInOutQuint"
         offset={config.scrollOffset}
         spy
+        hashSpy
       >
         <span className={styles.linkText}>ACHIEVEMENTS</span>
       </Link>
@@ -42,6 +45,7 @@ const Navbar = () => (
         smooth="easeInOutQuint"
         offset={config.scrollOffset}
         spy
+        hashSpy
       >
         <span className={styles.linkText}>WORK</span>
       </Link>
@@ -49,9 +53,9 @@ const Navbar = () => (
         className={styles.link}
         to="skills"
         smooth="easeInOutQuint"
-        // offset={config.scrollOffset}
-        offset={-60}
+        offset={config.scrollOffset}
         spy
+        hashSpy
       >
         <span className={styles.linkText}>SKILLS</span>
       </Link>
@@ -61,6 +65,7 @@ const Navbar = () => (
         smooth="easeInOutQuint"
         offset={config.scrollOffset}
         spy
+        hashSpy
       >
         <span className={styles.linkText}>CONTACT ME</span>
       </Link>

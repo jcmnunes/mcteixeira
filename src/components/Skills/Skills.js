@@ -3,9 +3,9 @@ import React from 'react';
 import AnimatedNumber from 'react-animated-number';
 import VisibilitySensor from 'react-visibility-sensor';
 import CircularProgressbar from 'react-circular-progressbar';
-import config from '../../data/config.json';
-import data from '../../data/skills';
-import styles from './Skills.module.scss';
+import config from '../../../data/config.json';
+import data from '../../../data/skills';
+import styles from './Skills.module.css';
 
 const Bar = ({ title, value }) => (
   <div className={styles.barContainer}>

@@ -9,7 +9,7 @@
   z-index: 500;
   opacity: 0.97;
   background: white;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   padding: 0 30px;
@@ -23,14 +23,13 @@
 
 .link {
   display: none;
-  font-family: Nunito;
   position: relative;
   height: 60px;
   align-items: center;
   transition: all 300ms ease;
   cursor: pointer;
 
-  &:after {
+  &::after {
     position: absolute;
     top: auto;
     bottom: -4px;
@@ -38,11 +37,16 @@
     content: "";
     height: 4px;
     width: 100%;
-    position: absolute;
     left: 0;
     z-index: 203;
     opacity: 0;
     transition: all 300ms ease;
+  }
+
+  & .linkText {
+    padding: 0 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   &:first-of-type {
@@ -58,19 +62,13 @@
   }
 }
 
-.link:global(.active),
-.link:hover {
+.link:hover,
+.link:global(.active) {
   color: var(--blue);
 
-  &:after {
+  &::after {
     opacity: 1;
   }
-}
-
-.linkText {
-  padding: 0 15px;
-  border-left: 1px solid rgba(0, 0, 0, 0.05) ;
-  border-right: 1px solid rgba(0, 0, 0, 0.05) ;
 }
 
 @media (--small-viewport) {
