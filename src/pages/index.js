@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import Achievements from '../components/Achievements';
 import Work from '../components/Work';
 import Skills from '../components/Skills';
+import DownloadCV from '../components/DownloadCV';
+import ContactForm from '../components/ContactForm';
 import { Hex } from '../components/icons';
 import styles from './index.module.css';
 import workData from '../../data/work';
@@ -80,9 +82,20 @@ const IndexPage = () => (
         <Skills />
       </div>
     </Element>
-    <Element name="contactme" className="section-wrapper">
-      <h1>CONTACT ME</h1>
+    <Element name="cv">
+      <DownloadCV />
     </Element>
+    <Element name="contactme" className={styles.contact}>
+      <div className="section-wrapper">
+        <h1>SEND ME A MESSAGE</h1>
+        <ContactForm />
+      </div>
+    </Element>
+    <div className={`section-wrapper ${styles.footer}`}>
+      <div className={styles.footerText}>
+        © 2017 MCT - Maria Teixeira. Made by Jose Nunes (josenunes.xyz)
+      </div>
+    </div>
   </div>
 );
 

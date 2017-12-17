@@ -4,6 +4,14 @@
   position: relative;
   width: 100%;
   background: var(--white);
+
+  & button:first-child {
+    display: inline-block;
+  }
+
+  & button:last-child {
+    display: none;
+  }
 }
 
 .heroText {
@@ -84,14 +92,6 @@
   }
 }
 
-button:first-child {
-  display: inline-block;
-}
-
-button:last-child {
-  display: none;
-}
-
 @media (--tiny-viewport) {
   .heroText {
     padding: 5rem;
@@ -111,6 +111,16 @@ button:last-child {
 }
 
 @media (--smaller-viewport) {
+  .root {
+    & button:first-child {
+      display: none;
+    }
+
+    & button:last-child {
+      display: inline-block;
+    }
+  }
+
   .heroText {
     & .header {
       font-size: 3vw;
@@ -119,14 +129,6 @@ button:last-child {
     & .text {
       display: block;
     }
-  }
-
-  button:first-child {
-    display: none;
-  }
-
-  button:last-child {
-    display: inline-block;
   }
 }
 

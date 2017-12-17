@@ -1,0 +1,41 @@
+@import "../../assets/styles/config.css";
+
+.heading {
+  text-align: center;
+
+  & h1 {
+    border-bottom: none;
+    margin: 8rem 0 5rem;
+    padding: 0;
+  }
+}
+
+.download {
+  text-align: center;
+  padding-bottom: 8rem;
+
+  & a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  & button:first-child {
+    display: inline-block;
+  }
+
+  & button:last-child {
+    display: none;
+  }
+}
+
+@media (--tiny-viewport) {
+  .download {
+    & button:first-child {
+      display: none;
+    }
+
+    & button:last-child {
+      display: inline-block;
+    }
+  }
+}

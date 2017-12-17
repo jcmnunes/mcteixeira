@@ -72,6 +72,138 @@ h3 {
   font-weight: 700;
 }
 
+label {
+  color: color(var(--text) tint(20%));
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin: 0;
+  padding-left: 3rem;
+  z-index: 9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* don't show the x for text inputs */
+input::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+/* don't show the eye for password inputs */
+input::-ms-reveal {
+  width: 0;
+  height: 0;
+}
+
+textarea {
+  resize: none;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: color(var(--text) tint(20%));
+  background-color: var(--white);
+  padding: 1rem 1.5rem;
+  line-height: normal;
+  border: none;
+
+  &:global(.medium) {
+    font-size: 1.5rem;
+    padding: 1rem 1.25rem;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  font-size: 1.75rem;
+  font-weight: 400;
+  height: 5rem;
+  color: color(var(--text) tint(20%));
+  background-color: var(--white);
+  padding: 0 1.5rem;
+  line-height: normal;
+  width: 100%;
+  user-select: auto;
+  border: none;
+
+  &:global(.medium) {
+    font-size: 1.625rem;
+    height: 4rem;
+    padding: 0 1.25rem;
+  }
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  background: color(var(--blue) tint(95%));
+  box-shadow: 0 0 2px 0 rgba(29, 148, 243, 1);
+  border: none;
+}
+
+input[type="text"]:global(.error),
+input[type="password"]:global(.error),
+input[type="email"]:global(.error),
+textarea:global(.error) {
+  border: 1px solid color(var(--red) tint(40%)) !important;
+  border: none;
+}
+
+input[type="text"]:global(.error):focus,
+input[type="password"]:global(.error):focus,
+input[type="email"]:global(.error):focus,
+textarea:global(.error):focus {
+  background-color: #fffde8;
+  box-shadow: 0 0 2px 0 color(var(--red) tint(40%));
+  border: 1px solid #f9a098 !important;
+  border: none;
+}
+
+input[type="text"].search,
+input[type="password"].search,
+input[type="email"].search {
+  font-size: 14px;
+  border: none;
+}
+
+input:focus.fancytree-edit-input {
+  background: white;
+}
+
+::placeholder {
+  color: color(var(--text) tint(50%));
+  font-size: 1.75rem;
+}
+
+input:-ms-input-placeholder {
+  color: color(var(--text) tint(50%));
+}
+
+:global(.medium)::placeholder {
+  font-size: 1.625rem !important;
+}
+
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+textarea:disabled {
+  background: color(var(--blue) tint(85%));
+  color: color(var(--text) tint(50%));
+  border: none;
+}
+
+input[type="text"]:global(.picker) {
+  margin-left: 2rem;
+  width: 16rem;
+  height: 5rem;
+  border: none;
+}
+
 :global(.section-wrapper) {
   max-width: 80vw;
   margin: 0 auto;

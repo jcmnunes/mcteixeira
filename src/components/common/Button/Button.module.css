@@ -10,6 +10,17 @@
   border: none;
   cursor: pointer;
 
+  &:disabled {
+    background: color(var(--black) tint(20%));
+    color: color(var(--white) shade(10%));
+    cursor: auto;
+
+    &:hover {
+      background: color(var(--black) tint(20%));
+      color: color(var(--white) shade(10%));
+    }
+  }
+
   & .btnTxt {
     height: 3.75rem;
     display: flex;
