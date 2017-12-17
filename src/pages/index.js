@@ -76,12 +76,12 @@ const IndexPage = () => (
         {workData.map(data => <Work key={data.key} data={data} />)}
       </div>
     </Element>
-    <Element name="skills" className={styles.parallax}>
-      <div className="section-wrapper">
+    <div className={styles.parallax}>
+      <Element name="skills" className="section-wrapper">
         <h1>SKILLS</h1>
         <Skills />
-      </div>
-    </Element>
+      </Element>
+    </div>
     <Element name="cv">
       <DownloadCV />
     </Element>
