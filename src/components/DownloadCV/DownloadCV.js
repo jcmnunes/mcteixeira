@@ -11,16 +11,12 @@ const DownloadCV = () => (
       <h1>Download my CV</h1>
     </div>
     <div className={styles.download}>
-      <Button medium>
-        <a href={require('../../../files/dummy.pdf')} download>
-          DOWNLOAD
-        </a>
-      </Button>
-      <Button>
-        <a href={require('../../../files/dummy.pdf')} download>
-          DOWNLOAD
-        </a>
-      </Button>
+      <a href={require('../../../files/dummy.pdf')} download="download.pdf">
+        <Button medium>DOWNLOAD (7KB)</Button>
+      </a>
+      <a href={require('../../../files/dummy.pdf')} download="download.pdf">
+        <Button>DOWNLOAD (7KB)</Button>
+      </a>
     </div>
   </div>
 );

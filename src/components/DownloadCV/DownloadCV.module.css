@@ -19,22 +19,22 @@
     text-decoration: none;
   }
 
-  & button:first-child {
+  & a:first-child {
     display: inline-block;
   }
 
-  & button:last-child {
+  & a:last-child {
     display: none;
   }
 }
 
 @media (--tiny-viewport) {
   .download {
-    & button:first-child {
+    & a:first-child {
       display: none;
     }
 
-    & button:last-child {
+    & a:last-child {
       display: inline-block;
     }
   }

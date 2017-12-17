@@ -151,7 +151,6 @@ input[type="text"]:global(.error),
 input[type="password"]:global(.error),
 input[type="email"]:global(.error),
 textarea:global(.error) {
-  border: 1px solid color(var(--red) tint(40%)) !important;
   border: none;
 }
 
@@ -159,9 +158,8 @@ input[type="text"]:global(.error):focus,
 input[type="password"]:global(.error):focus,
 input[type="email"]:global(.error):focus,
 textarea:global(.error):focus {
-  background-color: #fffde8;
-  box-shadow: 0 0 2px 0 color(var(--red) tint(40%));
-  border: 1px solid #f9a098 !important;
+  background-color: color(var(--blue) tint(95%));
+  box-shadow: none;
   border: none;
 }
 
@@ -197,11 +195,10 @@ textarea:disabled {
   border: none;
 }
 
-input[type="text"]:global(.picker) {
-  margin-left: 2rem;
-  width: 16rem;
-  height: 5rem;
-  border: none;
+input:invalid,
+input:-moz-submit-invalid,
+input:required {
+  box-shadow: none;
 }
 
 :global(.section-wrapper) {
