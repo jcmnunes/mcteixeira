@@ -50,13 +50,13 @@
   }
 
   &:first-of-type {
-    .linkText {
+    & .linkText {
       border-left: none;
     }
   }
 
   &:last-of-type {
-    .linkText {
+    & .linkText {
       border-right: none;
     }
   }

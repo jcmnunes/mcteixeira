@@ -12,7 +12,7 @@
 
     & div {
       background: color(var(--text) tint(90%));
-      color: color(var(--text) tint(70%));
+      color: var(--text);
       border-radius: 2px;
       font-size: 1.75rem;
       padding: 0.5rem;
