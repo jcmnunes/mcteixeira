@@ -3,6 +3,8 @@
 .work {
   position: relative;
   width: 100%;
+  height: 1%;
+  margin-bottom: 4rem;
 
   & .thumbnail {
     position: relative;
@@ -22,7 +24,7 @@
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: 5px;
       visibility: hidden;
       opacity: 0;
       background: var(--text);
@@ -88,15 +90,39 @@
     & h4 {
       flex: 1;
     }
+  }
+}
 
-    & .likesContainer {
-      display: flex;
-      align-items: center;
+.date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: color(var(--text) tint(40%));
 
-      & .likes {
-        margin-left: 1rem;
-        color: color(var(--text) tint(40%));
-      }
+  & .dateText {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+}
+
+.readmore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--text);
+  cursor: pointer;
+
+  & .text {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    & .text {
+      text-decoration: underline;
     }
   }
 }
@@ -105,6 +131,7 @@
   .work {
     width: 60%;
     margin: 0 auto;
+    margin-bottom: 4rem;
   }
 }
 
