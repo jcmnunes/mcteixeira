@@ -1,0 +1,323 @@
+@import "./config.css";
+
+/* nunito-regular - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Nunito Regular'),
+    local('Nunito-Regular'),
+    url('../fonts/nunito-v9-latin-regular.woff2') format('woff2'),
+    url('../fonts/nunito-v9-latin-regular.woff') format('woff');
+}
+
+/* nunito-600 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local('Nunito SemiBold'),
+    local('Nunito-SemiBold'),
+    url('../fonts/nunito-v9-latin-600.woff2') format('woff2'),
+    url('../fonts/nunito-v9-latin-600.woff') format('woff');
+}
+
+/* nunito-700 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('Nunito Bold'),
+    local('Nunito-Bold'),
+    url('../fonts/nunito-v9-latin-700.woff2') format('woff2'),
+    url('../fonts/nunito-v9-latin-700.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 8px;
+}
+
+body {
+  margin: 0;
+  color: color(var(--text) tint(20%));
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-bottom: 1px solid color(var(--text) tint(90%));
+  padding-bottom: 3rem;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+label {
+  color: color(var(--text) tint(20%));
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin: 0;
+  padding-left: 3rem;
+  z-index: 9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* don't show the x for text inputs */
+input::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+/* don't show the eye for password inputs */
+input::-ms-reveal {
+  width: 0;
+  height: 0;
+}
+
+textarea {
+  resize: none;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: color(var(--text) tint(20%));
+  background-color: var(--white);
+  padding: 1rem 1.5rem;
+  line-height: normal;
+  border: none;
+
+  &:global(.medium) {
+    font-size: 1.5rem;
+    padding: 1rem 1.25rem;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  font-size: 1.75rem;
+  font-weight: 400;
+  height: 5rem;
+  color: color(var(--text) tint(20%));
+  background-color: var(--white);
+  padding: 0 1.5rem;
+  line-height: normal;
+  width: 100%;
+  user-select: auto;
+  border: none;
+
+  &:global(.medium) {
+    font-size: 1.625rem;
+    height: 4rem;
+    padding: 0 1.25rem;
+  }
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  background: color(var(--blue) tint(95%));
+  box-shadow: 0 0 2px 0 rgba(29, 148, 243, 1);
+  border: none;
+}
+
+input[type="text"]:global(.error),
+input[type="password"]:global(.error),
+input[type="email"]:global(.error),
+textarea:global(.error) {
+  border: none;
+}
+
+input[type="text"]:global(.error):focus,
+input[type="password"]:global(.error):focus,
+input[type="email"]:global(.error):focus,
+textarea:global(.error):focus {
+  background-color: color(var(--blue) tint(95%));
+  box-shadow: none;
+  border: none;
+}
+
+input[type="text"].search,
+input[type="password"].search,
+input[type="email"].search {
+  font-size: 14px;
+  border: none;
+}
+
+input:focus.fancytree-edit-input {
+  background: white;
+}
+
+::placeholder {
+  color: color(var(--text) tint(50%));
+  font-size: 1.75rem;
+}
+
+input:-ms-input-placeholder {
+  color: color(var(--text) tint(50%));
+}
+
+:global(.medium)::placeholder {
+  font-size: 1.625rem !important;
+}
+
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+textarea:disabled {
+  background: color(var(--blue) tint(85%));
+  color: color(var(--text) tint(50%));
+  border: none;
+}
+
+input:invalid,
+input:-moz-submit-invalid,
+input:required {
+  box-shadow: none;
+}
+
+:global(.section-wrapper) {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+:global(.flex-grid) {
+  display: block;
+}
+
+:global(.col) {
+  flex: 1;
+}
+
+:global(.col1) {
+  padding: 0;
+}
+
+:global(.col2) {
+  padding: 0;
+}
+
+@media (--tiny-viewport) {
+  body {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (--smaller-viewport) {
+  :global(.flex-grid) {
+    display: flex;
+  }
+
+  :global(.col1) {
+    padding: 0 2% 0 0;
+  }
+
+  :global(.col2) {
+    padding: 0 0 0 2%;
+  }
+}
+
+@media (--larger-viewport) {
+  :global(.section-wrapper) {
+    max-width: 1020px;
+  }
+}
+
+/*
+ * react-circular-progressbar styles
+ *
+ * All of the styles in this file are optional and configurable!
+ */
+
+.CircularProgressbar {
+  /*
+   * This fixes an issue where the CircularProgressbar svg has
+   * 0 width inside a "display: flex" container, and thus not visible.
+   *
+   * If you're not using "display: flex", you can remove this style.
+   */
+  width: 100%;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: var(--blue);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: color(var(--text) tint(90%));
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: var(--text);
+  font-size: 20px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-background {
+  fill: color(var(--text) tint(90%));
+}
+
+/*
+ * Sample background styles. Use these with e.g.:
+ *
+ *   <CircularProgressbar
+ *     className="CircularProgressbar-inverted"
+ *     background
+ *     percentage={50}
+ *   />
+ */
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+  fill: #3e98c7;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+  fill: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+  stroke: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+  stroke: transparent;
+}

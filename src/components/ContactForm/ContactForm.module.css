@@ -1,0 +1,66 @@
+@import "../../assets/styles/config.css";
+
+.wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+
+  & .nameEmail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    & input:first-child {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+
+    & input:last-child {
+      margin-left: 0;
+    }
+  }
+
+  & textarea {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  & .button {
+    text-align: center;
+
+    & button:first-child {
+      display: inline-block;
+    }
+
+    & button:last-child {
+      display: none;
+    }
+  }
+}
+
+@media (--smaller-viewport) {
+  .wrapper {
+    & .nameEmail {
+      flex-direction: row;
+
+      & input:first-child {
+        margin-right: 1rem;
+        margin-bottom: 0;
+      }
+
+      & input:last-child {
+        margin-left: 1rem;
+      }
+    }
+
+    & .button {
+      & button:first-child {
+        display: none;
+      }
+
+      & button:last-child {
+        display: inline-block;
+      }
+    }
+  }
+}

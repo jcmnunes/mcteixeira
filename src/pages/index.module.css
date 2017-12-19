@@ -1,0 +1,51 @@
+@import "../assets/styles/config.css";
+
+.workContainer {
+  position: relative;
+  width: 100%;
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.parallax {
+  background-image: url("../../images/parallax-7.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.contact {
+  background: var(--blue);
+  padding: 8rem 0;
+
+  & h1 {
+    color: var(--white);
+    border-bottom: none;
+    margin-top: 0;
+    margin-bottom: 5rem;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.footer {
+  margin: 8rem auto 5rem !important;
+
+  & .footerText {
+    text-align: center;
+    font-size: 13px;
+    color: color(var(--text) tint(80%));
+  }
+}
+
+@media (--smaller-viewport) {
+  .workContainer {
+    display: flex;
+  }
+}

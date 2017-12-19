@@ -1,0 +1,143 @@
+@import "../../assets/styles/config.css";
+
+.work {
+  position: relative;
+  width: 100%;
+  height: 1%;
+  margin-bottom: 4rem;
+
+  & .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 62.5%;
+    overflow: hidden;
+
+    & img {
+      max-width: 100%;
+      height: auto;
+      transform: scale(1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    & .backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 5px;
+      visibility: hidden;
+      opacity: 0;
+      background: var(--text);
+      transition: all 0.3s ease-in-out;
+    }
+
+    & .links {
+      position: absolute;
+      visibility: hidden;
+      top: 50%;
+      left: 50%;
+      bottom: auto;
+      transform: scale(0);
+      width: 120px;
+      height: 60px;
+      margin-left: -60px;
+      margin-top: -30px;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+
+      & div {
+        width: 60px;
+        height: 60px;
+        background: var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:first-of-type {
+          box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, 0.2);
+        }
+
+        &:hover {
+          background: var(--white);
+          color: var(--blue);
+        }
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+
+      & .backdrop {
+        visibility: visible;
+        opacity: 0.5;
+      }
+
+      & .links {
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+  }
+
+  & .title {
+    display: flex;
+
+    & h4 {
+      flex: 1;
+    }
+  }
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: color(var(--text) tint(40%));
+
+  & .dateText {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+}
+
+.readmore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--text);
+  cursor: pointer;
+
+  & .text {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    & .text {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (--tiny-viewport) {
+  .work {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (--smaller-viewport) {
+  .work {
+    width: 31%;
+    margin: 0;
+  }
+}

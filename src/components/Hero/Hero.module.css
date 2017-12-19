@@ -1,0 +1,161 @@
+@import "../../assets/styles/config.css";
+
+.root {
+  position: relative;
+  width: 100%;
+  background: var(--white);
+
+  & button:first-child {
+    display: inline-block;
+  }
+
+  & button:last-child {
+    display: none;
+  }
+}
+
+.heroText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  background-color: var(--white);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  & .header {
+    opacity: 0;
+    transform: translateY(-20%);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--blue);
+    text-align: center;
+  }
+
+  & .text {
+    display: none;
+    opacity: 0;
+    margin-top: 20px;
+    max-width: 300px;
+    font-size: 16px;
+    font-size: 1.5vw;
+  }
+
+  & .btn {
+    opacity: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &.visible {
+    opacity: 1;
+
+    & .header {
+      transform: translateY(20px);
+      animation-name: slideTop;
+      animation-duration: 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 0.5s;
+    }
+
+    & .text {
+      transform: translateY(20px);
+      animation-name: slideTop;
+      animation-duration: 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 0.6s;
+    }
+
+    & .btn {
+      transform: translateY(20px);
+      animation-name: slideTop;
+      animation-duration: 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 0.7s;
+    }
+  }
+}
+
+.hero {
+  height: calc(100vh - 60px) !important;
+  max-height: 60vw !important;
+  background: var(--blue);
+  display: block;
+
+  &.canvas {
+    display: none;
+  }
+}
+
+@media (--tiny-viewport) {
+  .heroText {
+    padding: 5rem;
+
+    & .header {
+      font-size: 3vw;
+    }
+  }
+
+  .hero {
+    display: none;
+
+    &.canvas {
+      display: block;
+    }
+  }
+}
+
+@media (--smaller-viewport) {
+  .root {
+    & button:first-child {
+      display: none;
+    }
+
+    & button:last-child {
+      display: inline-block;
+    }
+  }
+
+  .heroText {
+    & .header {
+      font-size: 3vw;
+    }
+
+    & .text {
+      display: block;
+    }
+  }
+}
+
+@media (--small-viewport) {
+  .heroText {
+    & .header {
+      font-size: 34px;
+    }
+
+    & .text {
+      font-size: 16px;
+    }
+  }
+
+  .hero {
+    max-height: 700px !important;
+  }
+}
+
+@keyframes slideTop {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

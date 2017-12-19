@@ -1,0 +1,88 @@
+@import "../../../assets/styles/config.css";
+
+.btn {
+  height: 5rem;
+  padding: 0 4rem;
+  line-height: normal;
+  display: inline;
+  color: var(--white);
+  background: color(var(--black) tint(20%));
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    background: color(var(--black) tint(20%));
+    color: color(var(--white) shade(10%));
+    cursor: auto;
+
+    &:hover {
+      background: color(var(--black) tint(20%));
+      color: color(var(--white) shade(10%));
+    }
+  }
+
+  & .btnTxt {
+    height: 3.75rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.75rem;
+  }
+
+  &.medium {
+    height: 4rem;
+    padding: 0 2rem;
+
+    & .btnTxt {
+      height: 2.75rem;
+      font-weight: 600;
+      font-size: 1.625rem;
+    }
+  }
+
+  &.small {
+    height: 3rem;
+    padding: 0 2rem;
+
+    & .btnTxt {
+      height: 2.75rem;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+  }
+
+  &:hover {
+    background: var(--black);
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.primary {
+    background: var(--blue);
+
+    &:hover {
+      background: color(var(--blue) tint(20%));
+    }
+  }
+
+  &.secondary {
+    background: var(--white);
+    border: 1px solid var(--black);
+    color: var(--black);
+
+    &:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+  }
+}
