@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'MCT - Maria Teixeira',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,6 +12,13 @@ module.exports = {
       options: {
         name: 'data',
         path: `${__dirname}/data/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: '#0099cc',
+        showSpinner: true,
       },
     },
   ],
