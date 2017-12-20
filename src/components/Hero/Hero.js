@@ -12,7 +12,7 @@ import styles from './Hero.module.css';
 class Hero extends React.Component {
   static goToAbout() {
     scroller.scrollTo('about', {
-      smooth: 'easeInOutQuint',
+      smooth: 'easeOutQuad',
       offset: config.scrollOffset,
     });
   }
