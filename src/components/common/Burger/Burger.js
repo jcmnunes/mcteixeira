@@ -57,9 +57,8 @@ export default class Burger extends React.Component {
               onClick={this.toggleMenuState}
               className={styles.link}
               to="home"
-              smooth="easeInOutQuint"
+              smooth="easeOutQuad"
               offset={config.scrollOffset}
-              spy
             >
               <span className={styles.linkText}>HOME</span>
             </Link>
@@ -67,9 +66,8 @@ export default class Burger extends React.Component {
               onClick={this.toggleMenuState}
               className={styles.link}
               to="about"
-              smooth="easeInOutQuint"
+              smooth="easeOutQuad"
               offset={config.scrollOffset}
-              spy
             >
               <span className={styles.linkText}>ABOUT</span>
             </Link>
@@ -77,9 +75,8 @@ export default class Burger extends React.Component {
               onClick={this.toggleMenuState}
               className={styles.link}
               to="achievements"
-              smooth="easeInOutQuint"
+              smooth="easeOutQuad"
               offset={config.scrollOffset}
-              spy
             >
               <span className={styles.linkText}>ACHIEVEMENTS</span>
             </Link>
@@ -87,9 +84,8 @@ export default class Burger extends React.Component {
               onClick={this.toggleMenuState}
               className={styles.link}
               to="work"
-              smooth="easeInOutQuint"
+              smooth="easeOutQuad"
               offset={config.scrollOffset}
-              spy
             >
               <span className={styles.linkText}>WORK</span>
             </Link>
@@ -97,9 +93,8 @@ export default class Burger extends React.Component {
               onClick={this.toggleMenuState}
               className={styles.link}
               to="skills"
-              smooth="easeInOutQuint"
+              smooth="easeOutQuad"
               offset={config.scrollOffset}
-              spy
             >
               <span className={styles.linkText}>SKILLS</span>
             </Link>
@@ -107,9 +102,8 @@ export default class Burger extends React.Component {
               onClick={this.toggleMenuState}
               className={styles.link}
               to="contactme"
-              smooth="easeInOutQuint"
+              smooth="easeOutQuad"
               offset={config.scrollOffset}
-              spy
             >
               <span className={styles.linkText}>CONTACT ME</span>
             </Link>

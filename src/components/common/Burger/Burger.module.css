@@ -98,24 +98,6 @@
   }
 }
 
-@media (--small-viewport) {
-  .link {
-    display: flex;
-  }
-
-  .navTrigger {
-    display: none;
-  }
-
-  .backdrop {
-    display: none;
-  }
-
-  .menu {
-    display: none;
-  }
-}
-
 @keyframes inM {
   50% { transform: rotate(0deg); }
   100% { transform: rotate(45deg); }
