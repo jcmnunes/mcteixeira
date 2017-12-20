@@ -61,9 +61,10 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
   opacity: 0.97;
+  transform: translateX(0);
 
   &.active {
-    right: 0;
+    transform: translateX(-300px);
   }
 }
 

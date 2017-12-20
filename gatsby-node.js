@@ -4,4 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
- // You can delete this file if you're not using it
+const cp = require('child_process');
+
+function postBuild(pages, callback) {
+  cp.Shell.execSync('cp -r assets/* public/');
+  callback();
+}
+
+module.exports = postBuild;
