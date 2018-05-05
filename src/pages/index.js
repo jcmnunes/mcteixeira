@@ -8,6 +8,7 @@ import Skills from '../components/Skills';
 import DownloadCV from '../components/DownloadCV';
 import ContactForm from '../components/ContactForm';
 import { Hex } from '../components/icons';
+import profile from '../../images/profile.jpg';
 import styles from './index.module.css';
 import workData from '../../data/work';
 
@@ -23,8 +24,9 @@ const IndexPage = () => (
         <div className="flex-grid">
           <div className="col col1">
             <p>
-              <span style={{ float: 'left', marginRight: '1rem' }}>
-                <Hex size={60} text="L" />
+              <span className={styles.hex}>
+                <Hex size={200} text="L" />
+                <img className={styles.profile} src={profile} alt="profile" />
               </span>
               Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
               eget lacinia odio sem nec elit. Maecenas sed diam eget risus
