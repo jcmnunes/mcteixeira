@@ -7,6 +7,7 @@ import Work from '../components/Work';
 import Skills from '../components/Skills';
 import DownloadCV from '../components/DownloadCV';
 import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
 import { Hex } from '../components/icons';
 import profile from '../../images/profile.jpg';
 import styles from './index.module.css';
@@ -96,11 +97,7 @@ const IndexPage = () => (
           <ContactForm />
         </div>
       </Element>
-      <div className={`section-wrapper ${styles.footer}`}>
-        <div className={styles.footerText}>
-          © 2017 MCT - Maria Teixeira. Made by Jose Nunes (josenunes.xyz)
-        </div>
-      </div>
+      <Footer />
     </div>
   </div>
 );
