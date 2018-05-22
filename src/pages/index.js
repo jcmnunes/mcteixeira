@@ -13,9 +13,9 @@ import profile from '../../images/profile.jpg';
 import styles from './index.module.css';
 import workData from '../../data/work';
 
-const IndexPage = () => (
+const IndexPage = props => (
   <div>
-    <Navbar />
+    <Navbar pathname={props.location.pathname} />
     <div id="index-root" style={{ marginTop: '60px' }}>
       <Element name="home">
         <Hero />
