@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Logo = ({ size, disabled }) => (
   <svg
@@ -41,3 +42,32 @@ export const Hex = ({ size, disabled, text }) => (
     </text>
   </svg>
 );
+
+export const Home = ({ size, disabled }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 36 36"
+    width={size}
+    height={size}
+    opacity={disabled ? '0.5' : '1'}
+  >
+    <path
+      d="M35.628 21.271L17.993 7.581.357 21.271v-5.584L17.993 2l17.635 13.689v5.582z"
+      fill="#09C"
+    />
+    <path
+      d="M31.219 20.774V34h-8.817v-8.817h-8.818V34H4.766V20.774l13.227-9.921 13.226 9.921z"
+      fill="#09C"
+    />
+  </svg>
+);
+
+Home.defaultProps = {
+  size: 36,
+  disabled: false,
+};
+
+Home.propTypes = {
+  size: PropTypes.number,
+  disabled: PropTypes.bool,
+};
