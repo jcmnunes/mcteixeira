@@ -31,6 +31,17 @@
 .nav {
   display: flex;
   justify-content: flex-end;
+
+  &.home {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+  }
 }
 
 @media (--small-viewport) {
