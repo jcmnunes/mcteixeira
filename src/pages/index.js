@@ -1,5 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
+import Img from 'gatsby-image';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Achievements from '../components/Achievements';
@@ -9,7 +10,6 @@ import DownloadCV from '../components/DownloadCV';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import { Hex } from '../components/icons';
-import profile from '../../images/profile.jpg';
 import styles from './index.module.css';
 import workData from '../../data/work';
 
@@ -27,7 +27,18 @@ const IndexPage = props => (
             <p>
               <span className={styles.hex}>
                 <Hex size={200} text="L" />
-                <img className={styles.profile} src={profile} alt="profile" />
+                <Img
+                  style={{
+                    position: 'absolute',
+                    left: '50%',
+                    top: '50%',
+                    borderRadius: '50%',
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                  className={styles.profile}
+                  resolutions={props.data.background.resolutions}
+                  alt="profile"
+                />
               </span>
               Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
               eget lacinia odio sem nec elit. Maecenas sed diam eget risus
@@ -103,3 +114,13 @@ const IndexPage = props => (
 );
 
 export default IndexPage;
+
+export const query = graphql`
+  query Homepage {
+    background: imageSharp(id: { regex: "/profile/" }) {
+      resolutions(width: 146, height: 146) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+  }
+`;
