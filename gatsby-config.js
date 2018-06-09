@@ -7,6 +7,7 @@ module.exports = {
     'gatsby-plugin-react-next',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
