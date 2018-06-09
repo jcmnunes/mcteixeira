@@ -36,7 +36,7 @@ const IndexPage = props => (
                     transform: 'translate(-50%, -50%)',
                   }}
                   className={styles.profile}
-                  resolutions={props.data.background.resolutions}
+                  resolutions={props.data.profileImg.resolutions}
                   alt="profile"
                 />
               </span>
@@ -117,7 +117,7 @@ export default IndexPage;
 
 export const query = graphql`
   query Homepage {
-    background: imageSharp(id: { regex: "/profile/" }) {
+    profileImg: imageSharp(id: { regex: "/profile/" }) {
       resolutions(width: 146, height: 146) {
         ...GatsbyImageSharpResolutions
       }
