@@ -18,16 +18,18 @@ class Work extends React.Component {
   render() {
     const { photoIndex, isOpen } = this.state;
     const { data } = this.props;
+    const route = data.fields.slug;
+
     return (
       <div className={styles.work}>
         <div className={styles.thumbnail}>
-          <img src={data.thumb} alt="" />
+          <img src={data.frontmatter.thumbnail} alt="" />
           <div className={styles.backdrop} />
           <div className={styles.links}>
             <div onClick={() => this.setState({ isOpen: true })}>
               <Icon icon="image" />
             </div>
-            <div onClick={() => navigateTo(data.page)}>
+            <div onClick={() => navigateTo(route)}>
               <Icon icon="link" />
             </div>
           </div>
@@ -35,23 +37,29 @@ class Work extends React.Component {
 
         {isOpen && (
           <Lightbox
-            mainSrc={data.images[photoIndex]}
-            nextSrc={data.images[(photoIndex + 1) % data.images.length]}
+            mainSrc={data.frontmatter.images[photoIndex]}
+            nextSrc={
+              data.frontmatter.images[
+                (photoIndex + 1) % data.frontmatter.images.length
+              ]
+            }
             prevSrc={
-              data.images[
-                (photoIndex + data.images.length - 1) % data.images.length
+              data.frontmatter.images[
+                (photoIndex + data.frontmatter.images.length - 1) %
+                  data.frontmatter.images.length
               ]
             }
             onCloseRequest={() => this.setState({ isOpen: false })}
             onMovePrevRequest={() =>
               this.setState({
                 photoIndex:
-                  (photoIndex + data.images.length - 1) % data.images.length,
+                  (photoIndex + data.frontmatter.images.length - 1) %
+                  data.frontmatter.images.length,
               })
             }
             onMoveNextRequest={() =>
               this.setState({
-                photoIndex: (photoIndex + 1) % data.images.length,
+                photoIndex: (photoIndex + 1) % data.frontmatter.images.length,
               })
             }
           />
@@ -60,10 +68,10 @@ class Work extends React.Component {
         <h4>{data.header}</h4>
         <div className={styles.date}>
           <Icon icon="calendar" color={colors.text40} spin={false} />
-          <span className={styles.dateText}>{data.date}</span>
+          <span className={styles.dateText}>{data.frontmatter.date}</span>
         </div>
-        <p>{data.text}</p>
-        <div className={styles.readmore} onClick={() => navigateTo(data.page)}>
+        <p>{data.excerpt}</p>
+        <div className={styles.readmore} onClick={() => navigateTo(route)}>
           <span className={styles.text}>read more</span>
           <Icon icon="arrowRight2" color={colors.text} spin={false} />
         </div>
