@@ -11,7 +11,6 @@ import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import { Hex } from '../components/icons';
 import styles from './index.module.css';
-import workData from '../../data/work';
 
 const IndexPage = props => (
   <div>
@@ -90,7 +89,9 @@ const IndexPage = props => (
           orci lacinia a. Proin blandit lorem finibus tincidunt.
         </p>
         <div className={styles.workContainer}>
-          {workData.map(data => <Work key={data.key} data={data} />)}
+          {props.data.works.edges.map(({ node }) => (
+            <Work key={node.id} data={node} />
+          ))}
         </div>
       </Element>
       <div className={styles.parallax}>
@@ -120,6 +121,24 @@ export const query = graphql`
     profileImg: imageSharp(id: { regex: "/profile/" }) {
       resolutions(width: 146, height: 146) {
         ...GatsbyImageSharpResolutions
+      }
+    }
+
+    works: allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MMM YY")
+            thumbnail
+            images
+          }
+          excerpt
+          fields {
+            slug
+          }
+        }
       }
     }
   }

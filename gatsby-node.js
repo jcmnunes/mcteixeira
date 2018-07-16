@@ -7,12 +7,12 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
     const slug = createFilePath({
       node,
       getNode,
-      basePath: 'posts',
+      basePath: 'works',
     });
     createNodeField({
       node,
       name: 'slug',
-      value: `/posts${slug}`,
+      value: `/works${slug}`,
     });
   }
 };
