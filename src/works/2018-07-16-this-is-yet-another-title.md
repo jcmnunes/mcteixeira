@@ -4,8 +4,8 @@ title: This is yet another title
 date: '2018-07-16T18:21:31+01:00'
 thumbnail: /images/uploads/adi.png
 images:
-  - image: /images/uploads/adi.png
-  - image: /images/uploads/adidas_shoes_illustration.jpg
+  - "/images/uploads/adi.png"
+  - "/images/uploads/adidas.jpg"
 ---
 # This is a heading
 
