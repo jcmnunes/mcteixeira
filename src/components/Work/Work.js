@@ -37,17 +37,17 @@ class Work extends React.Component {
 
         {isOpen && (
           <Lightbox
-            mainSrc={data.frontmatter.images[photoIndex]}
+            mainSrc={data.frontmatter.images[photoIndex].image}
             nextSrc={
               data.frontmatter.images[
                 (photoIndex + 1) % data.frontmatter.images.length
-              ]
+              ].image
             }
             prevSrc={
               data.frontmatter.images[
                 (photoIndex + data.frontmatter.images.length - 1) %
                   data.frontmatter.images.length
-              ]
+              ].image
             }
             onCloseRequest={() => this.setState({ isOpen: false })}
             onMovePrevRequest={() =>

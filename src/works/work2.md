@@ -3,9 +3,9 @@ title: Ligula Aenean Mattis
 date: "2018-05-13"
 thumbnail: "/assets/img2-thumb.jpg"
 images:
-  - "/assets/img1-thumb.jpg"
-  - "/assets/img2-thumb.jpg"
-  - "/assets/img3-thumb.jpg"
+  - image: /assets/img1-thumb.jpg
+  - image: /assets/img2-thumb.jpg
+  - image: /assets/img3-thumb.jpg
 ---
 
 Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam.

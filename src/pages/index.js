@@ -132,7 +132,9 @@ export const query = graphql`
             title
             date(formatString: "MMM YY")
             thumbnail
-            images
+            images {
+              image
+            }
           }
           excerpt
           fields {

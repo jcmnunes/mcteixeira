@@ -3,9 +3,9 @@ title: "Ultricies Commodo Ullamcorper"
 date: "2018-06-13"
 thumbnail: "/assets/img1-thumb.jpg"
 images:
-  - "/assets/img1-thumb.jpg"
-  - "/assets/img2-thumb.jpg"
-  - "/assets/img3-thumb.jpg"
+  - image: /assets/img1-thumb.jpg
+  - image: /assets/img2-thumb.jpg
+  - image: /assets/img3-thumb.jpg
 ---
 
 Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.
