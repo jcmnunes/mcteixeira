@@ -2,7 +2,7 @@
 layout: blog
 title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 date: '2018-07-17T01:49:45+01:00'
-thumbnail: /assets/adidasshoes.jpg
+thumbnail: /assets/adi.png
 images:
   - image: /assets/adidasshoes.jpg
   - image: /assets/adi.png
@@ -19,4 +19,4 @@ Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. P
 * Ipsum
 * Dolor
 
-![Alt text](/assets/adidasshoes.jpg)
+![Alt text](/assets/adi.png)
