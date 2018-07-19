@@ -1,6 +1,5 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import Img from 'gatsby-image';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Achievements from '../components/Achievements';
@@ -10,6 +9,7 @@ import DownloadCV from '../components/DownloadCV';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import { Hex } from '../components/icons';
+import profile from '../../images/profile.jpg';
 import styles from './index.module.css';
 
 const IndexPage = props => (
@@ -25,19 +25,8 @@ const IndexPage = props => (
           <div className="col col1">
             <p>
               <span className={styles.hex}>
-                <Hex size={200} text="L" />
-                <Img
-                  style={{
-                    position: 'absolute',
-                    left: '50%',
-                    top: '50%',
-                    borderRadius: '50%',
-                    transform: 'translate(-50%, -50%)',
-                  }}
-                  className={styles.profile}
-                  resolutions={props.data.profileImg.resolutions}
-                  alt="profile"
-                />
+                <Hex size={200} />
+                <img className={styles.profile} src={profile} alt="profile" />
               </span>
               Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
               eget lacinia odio sem nec elit. Maecenas sed diam eget risus

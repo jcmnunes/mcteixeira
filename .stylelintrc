@@ -9,5 +9,5 @@
   "rules": {
     "scale-unlimited/declaration-strict-value": "/color/"
   },
-  "ignoreFiles": "src/assets/styles/vendor/*.css"
+  "ignoreFiles": ["src/assets/styles/vendor/*.css", "src/pages/*.js"]
 }
