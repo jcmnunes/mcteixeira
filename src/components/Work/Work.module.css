@@ -1,16 +1,8 @@
 @import "../../assets/styles/config.css";
 
 .work {
-  position: relative;
-  width: 100%;
-  height: 1%;
-  margin-bottom: 4rem;
-
   & .thumbnail {
     position: relative;
-    width: 100%;
-    height: 62.5%;
-    overflow: hidden;
 
     & img {
       max-width: 100%;
@@ -124,20 +116,5 @@
     & .text {
       text-decoration: underline;
     }
-  }
-}
-
-@media (--tiny-viewport) {
-  .work {
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 4rem;
-  }
-}
-
-@media (--smaller-viewport) {
-  .work {
-    width: 31%;
-    margin: 0;
   }
 }
