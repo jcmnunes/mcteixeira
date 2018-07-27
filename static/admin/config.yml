@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  # name: git-gateway
+  name: test-repo
   branch: master
 
 publish_mode: editorial_workflow
@@ -23,3 +24,13 @@ collections:
         fields:
           - {label: Image, name: image, widget: image}
       - {label: Body, name: body, widget: markdown}
+
+  - label: "Content"
+    name: "content"
+    files:
+      - label: "Hero"
+        name: "hero"
+        file: "site/content/hero.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Message, name: message, widget: string}
