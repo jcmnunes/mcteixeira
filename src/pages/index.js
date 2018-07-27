@@ -12,6 +12,10 @@ import { Hex } from '../components/icons';
 import profile from '../../images/profile.jpg';
 import styles from './index.module.css';
 
+import heroData from '../content/hero.json';
+
+console.log(heroData.title, 'jsadbkasjhdbvkjashdb');
+
 const IndexPage = props => (
   <div>
     <Navbar pathname={props.location.pathname} />
