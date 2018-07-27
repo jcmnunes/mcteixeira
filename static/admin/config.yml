@@ -30,7 +30,7 @@ collections:
     files:
       - label: "Hero"
         name: "hero"
-        file: "site/content/hero.json"
+        file: "src/content/hero.json"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Message, name: message, widget: string}
