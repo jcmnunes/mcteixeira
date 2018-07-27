@@ -6,6 +6,10 @@ import config from '../../../data/config.json';
 import colors from '../../assets/colors';
 import styles from './Achievements.module.css';
 
+import content from '../../content/achievements.json';
+
+const { heading, achievements } = content;
+
 const Stat = ({ value, title, desc }) => (
   <div className={styles.statRoot}>
     <div className={styles.value}>
@@ -40,15 +44,17 @@ Stat.propTypes = {
 class Achievements extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { values: config.achievements.map(() => 0) };
+    this.state = { values: Object.keys(achievements).map(() => 0) };
     this.onVisibilityChange = this.onVisibilityChange.bind(this);
   }
 
   onVisibilityChange(isVisible) {
     if (isVisible) {
-      this.setState({ values: config.achievements.map(a => a.value) });
+      this.setState({
+        values: Object.keys(achievements).map(key => achievements[key].value),
+      });
     } else {
-      this.setState({ values: config.achievements.map(() => 0) });
+      this.setState({ values: Object.keys(achievements).map(() => 0) });
     }
   }
 
@@ -57,15 +63,15 @@ class Achievements extends React.Component {
       <VisibilitySensor onChange={this.onVisibilityChange} partialVisibility>
         <div className="section-wrapper">
           <div className={styles.achievements}>
-            <h1>My achievements</h1>
+            <h1>{heading}</h1>
           </div>
           <div className={styles.stats}>
-            {config.achievements.map(({ title, desc }, index) => (
+            {Object.keys(achievements).map((key, index) => (
               <Stat
-                key={title}
+                key={achievements[key].title}
                 value={this.state.values[index]}
-                title={title}
-                desc={desc}
+                title={achievements[key].title}
+                desc={achievements[key].description}
               />
             ))}
           </div>
