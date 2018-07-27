@@ -6,6 +6,8 @@ import particles from '../../../data/particlesjs-config.json';
 import Button from '../common/Button';
 import styles from './Hero.module.css';
 
+import content from '../../content/hero.json';
+
 /**
  * Hero
  */
@@ -43,13 +45,10 @@ class Hero extends React.Component {
             MY NAME IS<br />
             MARIA TEIXEIRA<br />
           </div>
-          <div className={styles.text}>
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </div>
+          <div className={styles.text}>{content.message}</div>
           <div className={styles.btn}>
             <Button small onClick={Hero.goToAbout}>
-              ABOUT ME
+              {content.btnText}
             </Button>
             <Button onClick={Hero.goToAbout}>ABOUT ME</Button>
           </div>

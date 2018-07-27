@@ -1,20 +1,5 @@
 @import "../assets/styles/config.css";
 
-.hex {
-  float: left;
-  margin-right: 1rem;
-  position: relative;
-
-  & .profile {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 73%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 .workContainer {
   display: grid;
   grid-gap: 20px;
