@@ -1,4 +1,5 @@
 {
-  "title": "This is the titlez",
-  "message": "This is the messagez"
+  "title": "This is the title",
+  "message": "This is the message",
+  "btnText": "About me"
 }
