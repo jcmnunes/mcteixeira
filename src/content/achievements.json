@@ -1,17 +1,20 @@
 {
-  "achievement1": {
-    "value": 142,
-    "title": "articles",
-    "description": "Lorem ipsum dolor sit amet"
-  },
-  "achievement2": {
-    "value": 89,
-    "title": "projects",
-    "description": "Donec ultricies iaculis nisi quis posuere. Vestibulum luctus."
-  },
-  "achievement3": {
-    "value": 7,
-    "title": "years of experience",
-    "description": "Cras mollis metus sit amet cursus suscipit. Integer commodo."
+  "heading": "My achievements",
+  "achievements": {
+    "achievement1": {
+      "value": 141,
+      "title": "articles",
+      "description": "Lorem ipsum dolor sit amet"
+    },
+    "achievement2": {
+      "value": 88,
+      "title": "projects",
+      "description": "Donec ultricies iaculis nisi quis posuere. Vestibulum luctus."
+    },
+    "achievement3": {
+      "value": 8,
+      "title": "years of experience",
+      "description": "Cras mollis metus sit amet cursus suscipit. Integer commodo."
+    }
   }
 }

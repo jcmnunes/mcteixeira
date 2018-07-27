@@ -48,24 +48,29 @@ collections:
         name: "achievements"
         file: "src/content/achievements.json"
         fields:
-          - label: Achievement 1
-            name: achievement1
+          - {label: Heading, name: heading, widget: string}
+          - label: Achievements
+            name: achievements
             widget: object
             fields:
-              - {label: "Value", name: value, widget: string}
-              - {label: "Title", name: title, widget: string}
-              - {label: "Description", name: description, widget: string}
-          - label: Achievement 2
-            name: achievement2
-            widget: object
-            fields:
-              - {label: "Value", name: value, widget: string}
-              - {label: "Title", name: title, widget: string}
-              - {label: "Description", name: description, widget: string}
-          - label: Achievement 3
-            name: achievement3
-            widget: object
-            fields:
-              - {label: "Value", name: value, widget: string}
-              - {label: "Title", name: title, widget: string}
-              - {label: "Description", name: description, widget: string}
+              - label: Achievement 1
+                name: achievement1
+                widget: object
+                fields:
+                  - {label: "Value", name: value, widget: string}
+                  - {label: "Title", name: title, widget: string}
+                  - {label: "Description", name: description, widget: string}
+              - label: Achievement 2
+                name: achievement2
+                widget: object
+                fields:
+                  - {label: "Value", name: value, widget: string}
+                  - {label: "Title", name: title, widget: string}
+                  - {label: "Description", name: description, widget: string}
+              - label: Achievement 3
+                name: achievement3
+                widget: object
+                fields:
+                  - {label: "Value", name: value, widget: string}
+                  - {label: "Title", name: title, widget: string}
+                  - {label: "Description", name: description, widget: string}
