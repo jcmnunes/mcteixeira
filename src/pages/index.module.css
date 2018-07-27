@@ -16,13 +16,13 @@
 }
 
 .workContainer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: 5rem;
+  margin-top: 5rem;
   position: relative;
   width: 100%;
-  display: block;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .parallax {
@@ -46,11 +46,5 @@
     margin-bottom: 5rem;
     padding: 0;
     text-align: center;
-  }
-}
-
-@media (--smaller-viewport) {
-  .workContainer {
-    display: flex;
   }
 }
