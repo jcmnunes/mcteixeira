@@ -2,8 +2,8 @@ import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import PropTypes from 'prop-types';
 import { navigateTo } from 'gatsby-link';
-import Icon from '../common/Icon';
-import colors from '../../assets/colors';
+import Icon from '../../common/Icon';
+import colors from '../../../assets/colors';
 import styles from './Work.module.css';
 
 class Work extends React.Component {

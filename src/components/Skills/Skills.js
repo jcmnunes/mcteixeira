@@ -5,12 +5,18 @@ import VisibilitySensor from 'react-visibility-sensor';
 import CircularProgressbar from 'react-circular-progressbar';
 import config from '../../../data/config.json';
 import data from '../../../data/skills';
+
+import content from '../../content/skills.json';
 import styles from './Skills.module.css';
 
-const Bar = ({ title, value }) => (
+const { skill1, skill2 } = content;
+const chart1 = skill1.chart;
+const chart2 = skill2.chart;
+
+const Bar = ({ text, value }) => (
   <div className={styles.barContainer}>
     <div className={styles.title}>
-      <h4>{title}</h4>
+      <h4>{text}</h4>
       <div>
         <AnimatedNumber
           component="span"
@@ -32,10 +38,10 @@ const Bar = ({ title, value }) => (
   </div>
 );
 
-const Circle = ({ title, value }) => (
+const Circle = ({ text, value }) => (
   <div className={styles.circle}>
     <CircularProgressbar percentage={value} className={styles.stat} />
-    <h4>{title}</h4>
+    <h4>{text}</h4>
   </div>
 );
 
@@ -43,8 +49,8 @@ class Skills extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      valuesSkills1: data.skills1.map(() => 0),
-      valuesSkills2: data.skills2.map(() => 0),
+      valuesSkills1: Object.keys(chart1).map(() => 0),
+      valuesSkills2: Object.keys(chart2).map(() => 0),
     };
     this.onVisibilityChange = this.onVisibilityChange.bind(this);
   }
@@ -52,13 +58,13 @@ class Skills extends React.Component {
   onVisibilityChange(isVisible) {
     if (isVisible) {
       this.setState({
-        valuesSkills1: data.skills1.map(skill => skill.value),
-        valuesSkills2: data.skills2.map(skill => skill.value),
+        valuesSkills1: Object.keys(chart1).map(key => chart1[key].value),
+        valuesSkills2: Object.keys(chart2).map(key => chart2[key].value),
       });
     } else {
       this.setState({
-        valuesSkills1: data.skills1.map(() => 0),
-        valuesSkills2: data.skills2.map(() => 0),
+        valuesSkills1: Object.keys(chart1).map(() => 0),
+        valuesSkills2: Object.keys(chart2).map(() => 0),
       });
     }
   }
@@ -68,50 +74,26 @@ class Skills extends React.Component {
       <VisibilitySensor onChange={this.onVisibilityChange} partialVisibility>
         <div className="flex-grid">
           <div className="col col1">
-            <h3>Research</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur
-              et. Integer posuere erat a ante venenatis dapibus posuere velit
-              aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-              condimentum nibh, ut fermentum massa justo sit amet risus. Nullam
-              quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.
-              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-              auctor.
-            </p>
-            {data.skills1.map((skill, index) => (
+            <h3>{skill1.heading}</h3>
+            <p>{skill1.text}</p>
+            {Object.keys(chart1).map((key, index) => (
               <Bar
-                key={skill.key}
-                title={skill.title}
+                key={key}
+                text={chart1[key].text}
                 value={this.state.valuesSkills1[index]}
               />
             ))}
-            <h3>Other</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur
-              et. Integer posuere erat a ante venenatis dapibus posuere velit
-              aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-              condimentum nibh, ut fermentum massa justo sit amet risus. Nullam
-              quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.
-              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-              auctor.
-            </p>
+            <h3>{content.otherSkills.heading}</h3>
+            <p>{content.otherSkills.text}</p>
           </div>
           <div className="col col2">
-            <h3>COMMUNICATION</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              quis risus eget urna mollis ornare vel eu leo. Nullam quis risus
-              eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus
-              et magnis dis parturient montes, nascetur ridiculus mus.
-              Vestibulum id ligula porta felis euismod semper. Fusce dapibus,
-              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus.
-            </p>
+            <h3>{skill2.heading}</h3>
+            <p>{skill2.text}</p>
             <div>
-              {data.skills2.map((skill, index) => (
+              {Object.keys(chart2).map((key, index) => (
                 <Circle
-                  key={skill.key}
-                  title={skill.title}
+                  key={key}
+                  text={chart2[key].text}
                   value={this.state.valuesSkills2[index]}
                 />
               ))}

@@ -1,0 +1,11 @@
+@import "../../assets/styles/config.css";
+
+.workContainer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  position: relative;
+  width: 100%;
+}
