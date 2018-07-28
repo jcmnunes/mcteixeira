@@ -17,30 +17,8 @@
       }
     }
   },
-  "skill2": {
-    "heading": "Communication",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
-    "chart": {
-      "value1": {
-        "value": 75,
-        "text": "Lorem ipsum"
-      },
-      "value2": {
-        "value": 92,
-        "text": "Aenean pharetra"
-      },
-      "value3": {
-        "value": 86,
-        "text": "Ridiculus inceptos"
-      },
-      "value4": {
-        "value": 67,
-        "text": "Sit amet"
-      }
-    }
-  },
   "otherSkills": {
-    "heading": "Other",
+    "heading": "Other skills",
     "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
   }
 }
