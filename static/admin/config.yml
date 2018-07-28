@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  # name: test-repo
+  # name: git-gateway
+  name: test-repo
   branch: master
 
 publish_mode: editorial_workflow
@@ -48,29 +48,109 @@ collections:
         name: "achievements"
         file: "src/content/achievements.json"
         fields:
-          - {label: Heading, name: heading, widget: string}
-          - label: Achievements
-            name: achievements
+          - label: Achievement 1
+            name: achievement1
             widget: object
             fields:
-              - label: Achievement 1
-                name: achievement1
+              - {label: "Value", name: value, widget: string}
+              - {label: "Title", name: title, widget: string}
+              - {label: "Description", name: description, widget: string}
+          - label: Achievement 2
+            name: achievement2
+            widget: object
+            fields:
+              - {label: "Value", name: value, widget: string}
+              - {label: "Title", name: title, widget: string}
+              - {label: "Description", name: description, widget: string}
+          - label: Achievement 3
+            name: achievement3
+            widget: object
+            fields:
+              - {label: "Value", name: value, widget: string}
+              - {label: "Title", name: title, widget: string}
+              - {label: "Description", name: description, widget: string}
+      - label: "Works"
+        name: "works"
+        file: "src/content/works.json"
+        fields:
+          - {label: Text, name: text, widget: text}
+      - label: "Skills"
+        name: "skills"
+        file: "src/content/skills.json"
+        fields:
+          - label: Skill 1
+            name: skill1
+            widget: object
+            fields:
+              - {label: "Heading", name: heading, widget: string}
+              - {label: "Text", name: text, widget: text}
+              - label: Chart
+                name: chart
                 widget: object
                 fields:
-                  - {label: "Value", name: value, widget: string}
-                  - {label: "Title", name: title, widget: string}
-                  - {label: "Description", name: description, widget: string}
-              - label: Achievement 2
-                name: achievement2
+                  - label: "Value 1"
+                    name: value1
+                    widget: object
+                    fields:
+                      - {label: "Value", name: value, widget: string}
+                      - {label: "Text", name: text, widget: string}
+                  - label: "Value 2"
+                    name: value2
+                    widget: object
+                    fields:
+                      - {label: "Value", name: value, widget: string}
+                      - {label: "Text", name: text, widget: string}
+                  - label: "Value 3"
+                    name: value3
+                    widget: object
+                    fields:
+                      - {label: "Value", name: value, widget: string}
+                      - {label: "Text", name: text, widget: string}
+          - label: Skill 2
+            name: skill1
+            widget: object
+            fields:
+              - {label: "Heading", name: heading, widget: string}
+              - {label: "Text", name: text, widget: text}
+              - label: Chart
+                name: chart
                 widget: object
                 fields:
-                  - {label: "Value", name: value, widget: string}
-                  - {label: "Title", name: title, widget: string}
-                  - {label: "Description", name: description, widget: string}
-              - label: Achievement 3
-                name: achievement3
-                widget: object
-                fields:
-                  - {label: "Value", name: value, widget: string}
-                  - {label: "Title", name: title, widget: string}
-                  - {label: "Description", name: description, widget: string}
+                  - label: "Value 1"
+                    name: value1
+                    widget: object
+                    fields:
+                      - {label: "Value", name: value, widget: string}
+                      - {label: "Text", name: text, widget: string}
+                  - label: "Value 2"
+                    name: value2
+                    widget: object
+                    fields:
+                      - {label: "Value", name: value, widget: string}
+                      - {label: "Text", name: text, widget: string}
+                  - label: "Value 3"
+                    name: value3
+                    widget: object
+                    fields:
+                      - {label: "Value", name: value, widget: string}
+                      - {label: "Text", name: text, widget: string}
+                  - label: "Value 4"
+                    name: value4
+                    widget: object
+                    fields:
+                      - {label: "Value", name: value, widget: string}
+                      - {label: "Text", name: text, widget: string}
+          - label: Other skills
+            name: otherSkills
+            widget: object
+            fields:
+              - {label: "Heading", name: heading, widget: string}
+              - {label: "Text", name: text, widget: text}
+      - label: "Download CV"
+        name: "downalod"
+        file: "src/content/download.json"
+        fields:
+          - {label: "Button text", name: btntext, widget: string}
+          - label: "CV (pdf)"
+            name: "cv"
+            widget: "file"

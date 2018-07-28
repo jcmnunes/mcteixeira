@@ -6,9 +6,8 @@ import config from '../../../data/config.json';
 import colors from '../../assets/colors';
 import styles from './Achievements.module.css';
 
-import content from '../../content/achievements.json';
-
-const { heading, achievements } = content;
+import achievements from '../../content/achievements.json';
+import headings from '../../content/headings.json';
 
 const Stat = ({ value, title, desc }) => (
   <div className={styles.statRoot}>
@@ -63,7 +62,7 @@ class Achievements extends React.Component {
       <VisibilitySensor onChange={this.onVisibilityChange} partialVisibility>
         <div className="section-wrapper">
           <div className={styles.achievements}>
-            <h1>{heading}</h1>
+            <h1>{headings.achievements}</h1>
           </div>
           <div className={styles.stats}>
             {Object.keys(achievements).map((key, index) => (

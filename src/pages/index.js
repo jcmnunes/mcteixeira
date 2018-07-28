@@ -4,12 +4,14 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Achievements from '../components/Achievements';
-import Work from '../components/Work';
+import Works from '../components/Works';
 import Skills from '../components/Skills';
 import DownloadCV from '../components/DownloadCV';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import styles from './index.module.css';
+
+import headings from '../content/headings.json';
 
 const IndexPage = props => (
   <div>
@@ -19,28 +21,19 @@ const IndexPage = props => (
         <Hero />
       </Element>
       <Element name="about" className="section-wrapper">
+        <h1>{headings.about}</h1>
         <About />
       </Element>
       <Element name="achievements">
         <Achievements />
       </Element>
       <Element name="work" className="section-wrapper">
-        <h1>My latest work</h1>
-        <p>
-          Maecenas quis justo at neque venenatis sagittis. Cras felis augue,
-          malesuada quis iaculis eu, posuere vitae ante. Etiam ut malesuada
-          massa. Maecenas massa nunc. Ut egestas auctor felis, rhoncus ornare
-          orci lacinia a. Proin blandit lorem finibus tincidunt.
-        </p>
-        <div className={styles.workContainer}>
-          {props.data.works.edges.map(({ node }) => (
-            <Work key={node.id} data={node} />
-          ))}
-        </div>
+        <h1>{headings.works}</h1>
+        <Works works={props.data.works} />
       </Element>
       <div className={styles.parallax}>
         <Element name="skills" className="section-wrapper">
-          <h1>SKILLS</h1>
+          <h1>{headings.skills}</h1>
           <Skills />
         </Element>
       </div>
@@ -49,7 +42,7 @@ const IndexPage = props => (
       </Element>
       <Element name="contactme" className={styles.contact}>
         <div className="section-wrapper">
-          <h1>SEND ME A MESSAGE</h1>
+          <h1>{headings.contact}</h1>
           <ContactForm />
         </div>
       </Element>
