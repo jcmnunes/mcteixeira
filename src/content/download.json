@@ -1,4 +1,5 @@
 {
-  "btntext": "Button text",
+  "btnText": "Button text",
+  "fileName": "MCT_CV.pdf",
   "cv": "/assets/dummy.pdf"
 }

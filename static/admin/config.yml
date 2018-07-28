@@ -151,6 +151,7 @@ collections:
         file: "src/content/download.json"
         fields:
           - {label: "Button text", name: btnText, widget: string}
+          - {label: "File name", name: fileName, widget: string}
           - label: "CV (pdf)"
             name: "cv"
             widget: "file"

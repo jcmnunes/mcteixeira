@@ -1,3 +1,4 @@
+/* eslint-disable import/no-dynamic-require */
 import React from 'react';
 import Button from '../common/Button';
 import styles from './DownloadCV.module.css';
@@ -14,11 +15,19 @@ const DownloadCV = () => (
       <h1>{headings.download}</h1>
     </div>
     <div className={styles.download}>
-      <a href={require('../../../files/dummy.pdf')} download="download.pdf">
-        <Button medium>{content.btnText}</Button>
+      <a
+        href={require(`../../../static${content.cv}`)}
+        download={content.fileName}
+      >
+        <Button allCaps medium>
+          {content.btnText}
+        </Button>
       </a>
-      <a href={require('../../../files/dummy.pdf')} download="download.pdf">
-        <Button>{content.btnText}</Button>
+      <a
+        href={require(`../../../static${content.cv}`)}
+        download={content.fileName}
+      >
+        <Button allCaps>{content.btnText}</Button>
       </a>
     </div>
   </div>
