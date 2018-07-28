@@ -19,7 +19,7 @@ export default class WorkSingle extends Component {
 }
 
 export const query = graphql`
-  query WorkSingleQuery($slug: String!) {
+  query WorkSingleQuery($slug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
