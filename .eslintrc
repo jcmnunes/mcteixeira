@@ -30,6 +30,7 @@
     "mocha": true
   },
   "rules": {
+    "object-curly-newline": 0,
     "max-len": ["error", 80],
     "no-shadow": 0,
     "no-mixed-operators": 0,

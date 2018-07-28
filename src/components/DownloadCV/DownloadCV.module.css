@@ -28,7 +28,7 @@
   }
 }
 
-@media (--tiny-viewport) {
+@media (--smaller-viewport) {
   .download {
     & a:first-child {
       display: none;

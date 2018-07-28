@@ -7,10 +7,8 @@ import styles from './Button.module.css';
 /**
  * Button wrapper
  */
-export const Btn = ({
-  kind, small, medium, ...props 
-}) => {
-  const classes = `${styles.btn} ${kind} ${small} ${medium}`;
+export const Btn = ({ kind, small, medium, allCaps, ...props }) => {
+  const classes = `${styles.btn} ${kind} ${small} ${medium} ${allCaps}`;
   return <button {...props} className={classes} />;
 };
 
@@ -47,7 +45,13 @@ export default class Button extends React.Component {
 
   render() {
     const {
-      kind, loading, disabled, small, medium, ...props 
+      kind,
+      loading,
+      disabled,
+      small,
+      medium,
+      allCaps,
+      ...props
     } = this.props;
     return (
       <Btn
@@ -56,6 +60,7 @@ export default class Button extends React.Component {
         disabled={loading || disabled}
         small={small && styles.small}
         medium={medium && styles.medium}
+        allCaps={allCaps && styles.allCaps}
       >
         {this.renderChildren()}
       </Btn>
