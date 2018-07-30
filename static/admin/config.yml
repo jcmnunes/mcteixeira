@@ -15,9 +15,11 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - {label: "Relative Path", name: "relpath", widget: "hidden", default: "../../.."}
       - {label: Title, name: title, widget: string}
       - {label: Publish Date, name: date, widget: datetime}
-      - {label: Featured Image, name: thumbnail, widget: image}
+      - {label: Hero image, name: heroImage, widget: image}
+      - {label: Thumbnail, name: thumbnail, widget: image}
       - label: Images
         name: images
         widget: list

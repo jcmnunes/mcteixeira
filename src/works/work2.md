@@ -2,6 +2,8 @@
 title: Ligula Aenean Mattis
 date: "2018-05-13"
 thumbnail: "/assets/img2-thumb.jpg"
+heroImage: "/assets/img2-thumb.jpg"
+relpath: ../../static
 images:
   - image: /assets/img1-thumb.jpg
   - image: /assets/img2-thumb.jpg

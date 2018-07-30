@@ -3,6 +3,8 @@ layout: blog
 title: 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.'
 date: '2018-07-17T17:26:05+01:00'
 thumbnail: /assets/img1-thumb.jpg
+heroImage: /assets/img1-thumb.jpg
+relpath: ../../static
 images:
   - image: /assets/img1.jpg
   - image: /assets/img2.jpg

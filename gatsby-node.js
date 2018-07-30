@@ -14,6 +14,17 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       name: 'slug',
       value: `/works${slug}`,
     });
+
+    if (node.frontmatter.relpath && node.frontmatter.heroImage) {
+      const { relpath, heroImage } = node.frontmatter;
+      const heroImagePath = relpath + heroImage;
+
+      createNodeField({
+        node,
+        name: 'heroImage',
+        value: heroImagePath,
+      });
+    }
   }
 };
 
@@ -27,9 +38,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             node {
               fields {
                 slug
-              }
-              frontmatter {
-                thumbnail
               }
             }
           }

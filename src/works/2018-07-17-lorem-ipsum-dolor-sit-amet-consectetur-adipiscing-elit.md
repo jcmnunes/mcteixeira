@@ -3,6 +3,8 @@ layout: blog
 title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 date: '2018-07-17T01:49:45+01:00'
 thumbnail: /assets/adi.png
+heroImage: /assets/adi.png
+relpath: ../../static
 images:
   - image: /assets/adidasshoes.jpg
   - image: /assets/adi.png

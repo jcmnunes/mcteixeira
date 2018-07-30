@@ -9,15 +9,13 @@ import styles from './WorkSingle.module.css';
 export default class WorkSingle extends Component {
   render() {
     const { data, location } = this.props;
-    if (!data) {
-      return null;
-    }
+    const { heroImage } = data.markdownRemark.fields;
     return (
       <div>
         <Navbar pathname={location.pathname} />
         <div className={styles.headerImage}>
           <Img
-            sizes={data.background.sizes}
+            sizes={heroImage.childImageSharp.sizes}
             style={{
               position: 'absolute',
               left: 0,
@@ -28,15 +26,12 @@ export default class WorkSingle extends Component {
           />
           <div className={styles.backdrop} />
         </div>
-        {/* <span>{data.markdownRemark.frontmatter.date}</span>
-        <h1>{data.markdownRemark.frontmatter.title}</h1> */}
-        <div className="section-wrapper">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: data.markdownRemark.html,
-            }}
-          />
-        </div>
+        <div 
+          className={`section-wrapper ${styles.body}`}
+          dangerouslySetInnerHTML={{
+            __html: data.markdownRemark.html,
+          }}
+        />
       </div>
     );
   }
@@ -49,11 +44,19 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD YYYY")
-        thumbnail
+      }
+      fields {
+        heroImage {
+          childImageSharp {
+            sizes(maxWidth: 850) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
 
-    background: imageSharp(id: { regex: "/img1.jpg/" }) {
+    background: imageSharp(id: { regex: "/adi.png/" }) {
       sizes(maxWidth: 1240) {
         ...GatsbyImageSharpSizes
       }

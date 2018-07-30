@@ -2,6 +2,8 @@
 title: "Ultricies Commodo Ullamcorper"
 date: "2018-06-13"
 thumbnail: "/assets/img1-thumb.jpg"
+heroImage: "/assets/img1-thumb.jpg"
+relpath: ../../static
 images:
   - image: /assets/img1-thumb.jpg
   - image: /assets/img2-thumb.jpg
