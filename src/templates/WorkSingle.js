@@ -27,7 +27,7 @@ export default class WorkSingle extends Component {
           <div className={styles.backdrop} />
         </div>
         <div 
-          className={`section-wrapper ${styles.body}`}
+          className={`section-wrapper ${styles.postBody}`}
           dangerouslySetInnerHTML={{
             __html: data.markdownRemark.html,
           }}
