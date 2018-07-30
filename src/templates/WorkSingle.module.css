@@ -18,16 +18,47 @@
 
 .postBody {
   & h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: color(var(--text) tint(20%));
     text-transform: none;
     border-bottom: none;
-    padding-bottom: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-bottom: 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
   }
 
   & h2 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
+  }
+
+  & h3 {
+    font-size: 1.5rem;
+    text-transform: none;
+    font-weight: 700;
+  }
+
+  & a {
+    color: var(--blue);
+    text-decoration: none;
+
+    &:hover {
+      color: color(var(--blue) shade(20%));
+    }
+  }
+}
+
+@media (--tiny-viewport) {
+  .postBody {
+    & h1 {
+      font-size: 3rem;
+    }
+
+    & h2 {
+      font-size: 2.5rem;
+    }
+
+    & h3 {
+      font-size: 2rem;
+    }
   }
 }
