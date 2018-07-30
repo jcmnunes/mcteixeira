@@ -1,0 +1,17 @@
+@import "../assets/styles/config.css";
+
+.headerImage {
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: color(var(--blue) alpha(0.28));
+}

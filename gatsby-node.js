@@ -28,6 +28,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               fields {
                 slug
               }
+              frontmatter {
+                thumbnail
+              }
             }
           }
         }
@@ -36,7 +39,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
-          component: path.resolve('./src/layouts/WorkSingle.js'),
+          component: path.resolve('./src/templates/WorkSingle.js'),
           context: {
             slug: node.fields.slug,
           },
