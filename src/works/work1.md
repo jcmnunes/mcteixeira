@@ -8,6 +8,10 @@ images:
   - image: /assets/img1-thumb.jpg
   - image: /assets/img2-thumb.jpg
   - image: /assets/img3-thumb.jpg
+tags:
+  - tag: particles
+  - tag: nanotechnology
+  - tag: microbiology
 ---
 
 # This is a heading h1

@@ -8,6 +8,10 @@ relpath: ../../static
 images:
   - image: /assets/adidasshoes.jpg
   - image: /assets/adi.png
+tags:
+  - tag: particles
+  - tag: nanotechnology
+  - tag: microbiology
 ---
 # Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

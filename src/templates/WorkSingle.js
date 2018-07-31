@@ -11,7 +11,7 @@ export default class WorkSingle extends Component {
     const { data, location } = this.props;
     const { heroImage } = data.markdownRemark.fields;
     return (
-      <div>
+      <div className={styles.root}>
         <Navbar pathname={location.pathname} />
         <div className={styles.headerImage}>
           <Img
@@ -25,6 +25,14 @@ export default class WorkSingle extends Component {
             }}
           />
           <div className={styles.backdrop} />
+        </div>
+        <div className="section-wrapper">
+          <div className={styles.tags}>
+            {data.markdownRemark.frontmatter.tags.map(({ tag }) => (
+              <span className={styles.tag} key={tag}>{tag}</span>
+            ))}
+          </div>
+          <h1>{data.markdownRemark.frontmatter.title}</h1>
         </div>
         <div 
           className={`section-wrapper ${styles.postBody}`}
@@ -44,6 +52,9 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD YYYY")
+        tags {
+          tag
+        }
       }
       fields {
         heroImage {

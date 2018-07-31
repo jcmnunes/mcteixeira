@@ -9,6 +9,16 @@ images:
   - image: /assets/img1.jpg
   - image: /assets/img2.jpg
   - image: /assets/img3.jpg
+tags:
+  - tag: particles
+  - tag: nanotechnology
+  - tag: microbiology
+  - tag: particles
+  - tag: nanotechnology
+  - tag: microbiology
+  - tag: particles
+  - tag: nanotechnology
+  - tag: microbiology
 ---
 # Omnis temptat alis pererrat illo vincemur candida
 

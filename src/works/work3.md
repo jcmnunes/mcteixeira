@@ -8,6 +8,10 @@ images:
   - image: /assets/img1-thumb.jpg
   - image: /assets/img2-thumb.jpg
   - image: /assets/img3-thumb.jpg
+tags:
+  - tag: particles
+  - tag: nanotechnology
+  - tag: microbiology
 ---
 
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.
