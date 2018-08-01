@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Img from 'gatsby-image';
 
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 import styles from './WorkSingle.module.css';
 
@@ -40,6 +41,7 @@ export default class WorkSingle extends Component {
             __html: data.markdownRemark.html,
           }}
         />
+        <Footer />
       </div>
     );
   }
