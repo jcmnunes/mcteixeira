@@ -84,16 +84,3 @@
     }
   }
 }
-
-.date {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: color(var(--text) tint(40%));
-
-  & .dateText {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-left: 1rem;
-  }
-}

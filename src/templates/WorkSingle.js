@@ -1,9 +1,13 @@
 /* eslint-disable react/no-danger */
 import React, { Component } from 'react';
 import Img from 'gatsby-image';
+import { navigateTo } from 'gatsby-link';
+
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Date from '../components/common/Date';
+import ArrowButton from '../components/common/ArrowButton';
 
 import styles from './WorkSingle.module.css';
 
@@ -34,6 +38,17 @@ export default class WorkSingle extends Component {
             ))}
           </div>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
+          <div className={styles.details}>
+            <span className={styles.author}>
+              {data.markdownRemark.frontmatter.author}
+            </span>
+            <Date date={data.markdownRemark.frontmatter.date} />
+            <ArrowButton
+              action={() => navigateTo('/')}
+              text="GO BACK"
+              direction="l"
+            />
+          </div>
         </div>
         <div 
           className={`section-wrapper ${styles.postBody}`}
@@ -53,7 +68,8 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD YYYY")
+        author
+        date(formatString: "MMM YY")
         tags {
           tag
         }

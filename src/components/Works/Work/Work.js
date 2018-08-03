@@ -5,8 +5,8 @@ import { navigateTo } from 'gatsby-link';
 
 import Icon from '../../common/Icon';
 import ArrowButton from '../../common/ArrowButton';
+import Date from '../../common/Date';
 
-import colors from '../../../assets/colors';
 import styles from './Work.module.css';
 
 class Work extends React.Component {
@@ -69,10 +69,7 @@ class Work extends React.Component {
         )}
 
         <h4>{data.header}</h4>
-        <div className={styles.date}>
-          <Icon icon="calendar" color={colors.text40} spin={false} />
-          <span className={styles.dateText}>{data.frontmatter.date}</span>
-        </div>
+        <Date date={data.frontmatter.date} />
         <p>{data.excerpt}</p>
         <ArrowButton
           action={() => navigateTo(route)}
