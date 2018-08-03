@@ -12,6 +12,7 @@
   "ignoreFiles": [
     "src/assets/styles/vendor/*.css",
     "src/pages/*.js",
+    "src/components/*.js",
     "src/templates/*.js"
   ]
 }

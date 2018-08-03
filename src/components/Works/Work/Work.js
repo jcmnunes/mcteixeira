@@ -2,7 +2,10 @@ import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import PropTypes from 'prop-types';
 import { navigateTo } from 'gatsby-link';
+
 import Icon from '../../common/Icon';
+import ArrowButton from '../../common/ArrowButton';
+
 import colors from '../../../assets/colors';
 import styles from './Work.module.css';
 
@@ -71,10 +74,10 @@ class Work extends React.Component {
           <span className={styles.dateText}>{data.frontmatter.date}</span>
         </div>
         <p>{data.excerpt}</p>
-        <div className={styles.readmore} onClick={() => navigateTo(route)}>
-          <span className={styles.text}>read more</span>
-          <Icon icon="arrowRight2" color={colors.text} spin={false} />
-        </div>
+        <ArrowButton
+          action={() => navigateTo(route)}
+          text="read more"
+        />
       </div>
     );
   }

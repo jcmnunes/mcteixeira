@@ -1,5 +1,6 @@
 ---
 title: This new work will test the WorkSingle layout
+author: M.C. Teixeira
 date: '2018-08-01T19:15:18+01:00'
 thumbnail: /assets/img2.jpg
 heroImage: /assets/img1-thumb.jpg

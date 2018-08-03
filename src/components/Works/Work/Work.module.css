@@ -97,24 +97,3 @@
     margin-left: 1rem;
   }
 }
-
-.readmore {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: var(--text);
-  cursor: pointer;
-
-  & .text {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-
-  &:hover {
-    & .text {
-      text-decoration: underline;
-    }
-  }
-}
