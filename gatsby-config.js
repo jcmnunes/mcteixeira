@@ -12,6 +12,19 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-relative-images',
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+              wrapperStyle: 'margin: 15px -30px !important',
+            },
+          },
         ],
       },
     },
