@@ -2,8 +2,11 @@ import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import PropTypes from 'prop-types';
 import { navigateTo } from 'gatsby-link';
+
 import Icon from '../../common/Icon';
-import colors from '../../../assets/colors';
+import ArrowButton from '../../common/ArrowButton';
+import Date from '../../common/Date';
+
 import styles from './Work.module.css';
 
 class Work extends React.Component {
@@ -66,15 +69,12 @@ class Work extends React.Component {
         )}
 
         <h4>{data.header}</h4>
-        <div className={styles.date}>
-          <Icon icon="calendar" color={colors.text40} spin={false} />
-          <span className={styles.dateText}>{data.frontmatter.date}</span>
-        </div>
+        <Date date={data.frontmatter.date} />
         <p>{data.excerpt}</p>
-        <div className={styles.readmore} onClick={() => navigateTo(route)}>
-          <span className={styles.text}>read more</span>
-          <Icon icon="arrowRight2" color={colors.text} spin={false} />
-        </div>
+        <ArrowButton
+          action={() => navigateTo(route)}
+          text="read more"
+        />
       </div>
     );
   }

@@ -1,4 +1,6 @@
 import '../assets/styles/global.css';
+// import 'prismjs/themes/prism.css';
+import './prism.css';
 
 import React from 'react';
 import PropTypes from 'prop-types';

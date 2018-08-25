@@ -14,6 +14,17 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       name: 'slug',
       value: `/works${slug}`,
     });
+
+    if (node.frontmatter.relpath && node.frontmatter.heroImage) {
+      const { relpath, heroImage } = node.frontmatter;
+      const heroImagePath = relpath + heroImage;
+
+      createNodeField({
+        node,
+        name: 'heroImage',
+        value: heroImagePath,
+      });
+    }
   }
 };
 
@@ -36,7 +47,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
-          component: path.resolve('./src/layouts/WorkSingle.js'),
+          component: path.resolve('./src/templates/WorkSingle.js'),
           context: {
             slug: node.fields.slug,
           },

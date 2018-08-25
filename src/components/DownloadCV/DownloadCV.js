@@ -16,7 +16,7 @@ const DownloadCV = () => (
     </div>
     <div className={styles.download}>
       <a
-        href={require(`../../../static${content.cv}`)}
+        href={require('../../../static/assets/cv.pdf')}
         download={content.fileName}
       >
         <Button allCaps medium>
@@ -24,7 +24,7 @@ const DownloadCV = () => (
         </Button>
       </a>
       <a
-        href={require(`../../../static${content.cv}`)}
+        href={require('../../../static/assets/cv.pdf')}
         download={content.fileName}
       >
         <Button allCaps>{content.btnText}</Button>

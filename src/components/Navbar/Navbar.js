@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
-import GLink, { navigateTo } from 'gatsby-link';
+import GLink from 'gatsby-link';
 import config from '../../../data/config.json';
 import { Logo, Home } from '../icons';
 import Burger from '../common/Burger';

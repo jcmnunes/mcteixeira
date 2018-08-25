@@ -1,12 +1,25 @@
 ---
 layout: blog
 title: 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.'
+author: M.C. Teixeira
 date: '2018-07-17T17:26:05+01:00'
 thumbnail: /assets/img1-thumb.jpg
+heroImage: /assets/img1-thumb.jpg
+relpath: ../../static
 images:
   - image: /assets/img1.jpg
   - image: /assets/img2.jpg
   - image: /assets/img3.jpg
+tags:
+  - tag: particles
+  - tag: nanotechnology
+  - tag: microbiology
+  - tag: particles
+  - tag: nanotechnology
+  - tag: microbiology
+  - tag: particles
+  - tag: nanotechnology
+  - tag: microbiology
 ---
 # Omnis temptat alis pererrat illo vincemur candida
 
