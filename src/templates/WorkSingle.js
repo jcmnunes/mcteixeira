@@ -31,7 +31,7 @@ export default class WorkSingle extends Component {
           />
           <div className={styles.backdrop} />
         </div>
-        <div className="section-wrapper">
+        <div className="workSingle-wrapper">
           <div className={styles.tags}>
             {data.markdownRemark.frontmatter.tags.map(({ tag }) => (
               <span className={styles.tag} key={tag}>{tag}</span>
@@ -51,7 +51,7 @@ export default class WorkSingle extends Component {
           </div>
         </div>
         <div 
-          className={`section-wrapper ${styles.postBody}`}
+          className={`workSingle-wrapper ${styles.postBody}`}
           dangerouslySetInnerHTML={{
             __html: data.markdownRemark.html,
           }}
