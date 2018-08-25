@@ -1,14 +1,7 @@
 ---
 title: This new work will test the WorkSingle layout
-author: M.C. Teixeira
 date: '2018-08-01T19:15:18+01:00'
 thumbnail: /assets/img2.jpg
-heroImage: /assets/img1-thumb.jpg
-relpath: ../../static
-tags:
-  - tag: particles
-  - tag: nanotechnology
-  - tag: microbiology
 images:
   - image: /assets/img1.jpg
   - image: /assets/img2-thumb.jpg
@@ -38,4 +31,8 @@ const fn = () => console.log('log');class Coise extends React.Component {}
 2. alsdjknvlkjsdbva
 3. askdjvnkasjdbval
 
+<<<<<<< HEAD
 ![Alt text](/assets/adidasshoes.jpg)
+=======
+![Alt text](/assets/adidasshoes.jpg)
+>>>>>>> master
