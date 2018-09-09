@@ -1,13 +1,11 @@
-@import "./config.css";
+@import './config.css';
 
 /* nunito-regular - latin */
 @font-face {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
-  src:
-    local('Nunito Regular'),
-    local('Nunito-Regular'),
+  src: local('Nunito Regular'), local('Nunito-Regular'),
     url('../fonts/nunito-v9-latin-regular.woff2') format('woff2'),
     url('../fonts/nunito-v9-latin-regular.woff') format('woff');
 }
@@ -17,9 +15,7 @@
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 600;
-  src:
-    local('Nunito SemiBold'),
-    local('Nunito-SemiBold'),
+  src: local('Nunito SemiBold'), local('Nunito-SemiBold'),
     url('../fonts/nunito-v9-latin-600.woff2') format('woff2'),
     url('../fonts/nunito-v9-latin-600.woff') format('woff');
 }
@@ -29,9 +25,7 @@
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
-  src:
-    local('Nunito Bold'),
-    local('Nunito-Bold'),
+  src: local('Nunito Bold'), local('Nunito-Bold'),
     url('../fonts/nunito-v9-latin-700.woff2') format('woff2'),
     url('../fonts/nunito-v9-latin-700.woff') format('woff');
 }
@@ -100,9 +94,9 @@ input::-ms-reveal {
   height: 0;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+input[type='text'],
+input[type='password'],
+input[type='email'] {
   font-size: 1.75rem;
   font-weight: 400;
   height: 5rem;
