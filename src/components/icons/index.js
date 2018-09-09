@@ -10,8 +10,7 @@ export const Logo = ({ size, disabled }) => (
     height={size / 3}
     opacity={disabled ? '0.5' : '1'}
   >
-    >
-    <path fill="#09c" d="M0 0h600v200H0z" />
+    ><path fill="#09c" d="M0 0h600v200H0z" />
     <path
       fill="none"
       stroke="#fff"

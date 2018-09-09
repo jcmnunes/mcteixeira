@@ -9,9 +9,7 @@ import styles from './Icon.css';
  * @copyright 2017 doDOC
  */
 
-const Icon = ({
-  icon, size, spin, sty, disabled, color, 
-}) => (
+const Icon = ({ icon, size, spin, sty, disabled, color }) => (
   <svg
     style={sty}
     xmlns="http://www.w3.org/2000/svg"

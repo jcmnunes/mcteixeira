@@ -1,8 +1,8 @@
+/* global graphql */
 /* eslint-disable react/no-danger */
 import React, { Component } from 'react';
 import Img from 'gatsby-image';
 import { navigateTo } from 'gatsby-link';
-
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -34,23 +34,19 @@ export default class WorkSingle extends Component {
         <div className="workSingle-wrapper">
           <div className={styles.tags}>
             {data.markdownRemark.frontmatter.tags.map(({ tag }) => (
-              <span className={styles.tag} key={tag}>{tag}</span>
+              <span className={styles.tag} key={tag}>
+                {tag}
+              </span>
             ))}
           </div>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
           <div className={styles.details}>
-            <span className={styles.author}>
-              {data.markdownRemark.frontmatter.author}
-            </span>
+            <span className={styles.author}>{data.markdownRemark.frontmatter.author}</span>
             <Date date={data.markdownRemark.frontmatter.date} />
-            <ArrowButton
-              action={() => navigateTo('/')}
-              text="GO BACK"
-              direction="l"
-            />
+            <ArrowButton action={() => navigateTo('/')} text="GO BACK" direction="l" />
           </div>
         </div>
-        <div 
+        <div
           className={`workSingle-wrapper ${styles.postBody}`}
           dangerouslySetInnerHTML={{
             __html: data.markdownRemark.html,

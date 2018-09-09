@@ -41,9 +41,12 @@ class Hero extends React.Component {
         <div className={styles.hero} />
         <div className={`${styles.heroText} ${textVisible && styles.visible}`}>
           <div className={styles.header}>
-            HELLO<br />
-            MY NAME IS<br />
-            MARIA TEIXEIRA<br />
+            HELLO
+            <br />
+            MY NAME IS
+            <br />
+            MARIA TEIXEIRA
+            <br />
           </div>
           <div className={styles.text}>{content.message}</div>
           <div className={styles.btn}>

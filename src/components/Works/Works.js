@@ -11,7 +11,9 @@ const Works = ({ works }) => (
   <React.Fragment>
     <p>{content.text}</p>
     <div className={styles.workContainer}>
-      {works.edges.map(({ node }) => <Work key={node.id} data={node} />)}
+      {works.edges.map(({ node }) => (
+        <Work key={node.id} data={node} />
+      ))}
     </div>
   </React.Fragment>
 );

@@ -3,7 +3,6 @@ import React from 'react';
 import { navigateTo } from 'gatsby-link';
 import Navbar from '../components/Navbar';
 import styles from './404.module.css';
-import colors from '../assets/colors';
 
 const NotFoundPage = () => (
   <div className={styles.wrapper}>
