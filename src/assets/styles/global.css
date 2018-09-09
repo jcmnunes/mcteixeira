@@ -100,22 +100,6 @@ input::-ms-reveal {
   height: 0;
 }
 
-textarea {
-  resize: none;
-  font-size: 1.75rem;
-  font-weight: 400;
-  color: color(var(--text) tint(20%));
-  background-color: var(--white);
-  padding: 1rem 1.5rem;
-  line-height: normal;
-  border: none;
-
-  &:global(.medium) {
-    font-size: 1.5rem;
-    padding: 1rem 1.25rem;
-  }
-}
-
 input[type="text"],
 input[type="password"],
 input[type="email"] {
@@ -130,48 +114,78 @@ input[type="email"] {
   user-select: auto;
   border: none;
 
+  &:focus {
+    outline: none;
+    background: color(var(--blue) tint(95%));
+    box-shadow: 0 0 2px 0 rgba(29, 148, 243, 1);
+    border: none;
+  }
+
+  &:disabled {
+    background: color(var(--blue) tint(85%));
+    color: color(var(--text) tint(50%));
+    border: none;
+  }
+
   &:global(.medium) {
     font-size: 1.625rem;
     height: 4rem;
     padding: 0 1.25rem;
   }
+
+  &:global(.error) {
+    border: none;
+
+    &:focus {
+      background-color: color(var(--blue) tint(95%));
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  &.search {
+    font-size: 14px;
+    border: none;
+  }
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  outline: none;
-  background: color(var(--blue) tint(95%));
-  box-shadow: 0 0 2px 0 rgba(29, 148, 243, 1);
+textarea {
+  resize: none;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: color(var(--text) tint(20%));
+  background-color: var(--white);
+  padding: 1rem 1.5rem;
+  line-height: normal;
   border: none;
-}
 
-input[type="text"]:global(.error),
-input[type="password"]:global(.error),
-input[type="email"]:global(.error),
-textarea:global(.error) {
-  border: none;
-}
+  &:focus {
+    outline: none;
+    background: color(var(--blue) tint(95%));
+    box-shadow: 0 0 2px 0 rgba(29, 148, 243, 1);
+    border: none;
+  }
 
-input[type="text"]:global(.error):focus,
-input[type="password"]:global(.error):focus,
-input[type="email"]:global(.error):focus,
-textarea:global(.error):focus {
-  background-color: color(var(--blue) tint(95%));
-  box-shadow: none;
-  border: none;
-}
+  &:disabled {
+    background: color(var(--blue) tint(85%));
+    color: color(var(--text) tint(50%));
+    border: none;
+  }
 
-input[type="text"].search,
-input[type="password"].search,
-input[type="email"].search {
-  font-size: 14px;
-  border: none;
-}
+  &:global(.medium) {
+    font-size: 1.5rem;
+    padding: 1rem 1.25rem;
+  }
 
-input:focus.fancytree-edit-input {
-  background: white;
+  &:global(.error) {
+    border: none;
+
+    &:focus {
+      background-color: color(var(--blue) tint(95%));
+      box-shadow: none;
+      border: none;
+    }
+  }
 }
 
 ::placeholder {
@@ -185,14 +199,6 @@ input:-ms-input-placeholder {
 
 :global(.medium)::placeholder {
   font-size: 1.625rem !important;
-}
-
-input[type="text"]:disabled,
-input[type="password"]:disabled,
-textarea:disabled {
-  background: color(var(--blue) tint(85%));
-  color: color(var(--text) tint(50%));
-  border: none;
 }
 
 input:invalid,
