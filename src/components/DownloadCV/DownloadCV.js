@@ -15,18 +15,12 @@ const DownloadCV = () => (
       <h1>{headings.download}</h1>
     </div>
     <div className={styles.download}>
-      <a
-        href={require('../../../static/assets/cv.pdf')}
-        download={content.fileName}
-      >
+      <a href={require('../../../static/assets/cv.pdf')} download={content.fileName}>
         <Button allCaps medium>
           {content.btnText}
         </Button>
       </a>
-      <a
-        href={require('../../../static/assets/cv.pdf')}
-        download={content.fileName}
-      >
+      <a href={require('../../../static/assets/cv.pdf')} download={content.fileName}>
         <Button allCaps>{content.btnText}</Button>
       </a>
     </div>

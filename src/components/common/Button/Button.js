@@ -36,23 +36,11 @@ export default class Button extends React.Component {
 
   renderChildren() {
     const { loading, children } = this.props;
-    return (
-      <div className={styles.btnTxt}>
-        {loading ? this.renderLoading() : children}
-      </div>
-    );
+    return <div className={styles.btnTxt}>{loading ? this.renderLoading() : children}</div>;
   }
 
   render() {
-    const {
-      kind,
-      loading,
-      disabled,
-      small,
-      medium,
-      allCaps,
-      ...props
-    } = this.props;
+    const { kind, loading, disabled, small, medium, allCaps, ...props } = this.props;
     return (
       <Btn
         {...props}

@@ -1,3 +1,4 @@
+/* global graphql */
 import React from 'react';
 import { Element } from 'react-scroll';
 import Navbar from '../components/Navbar';

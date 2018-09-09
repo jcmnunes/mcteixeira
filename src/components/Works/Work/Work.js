@@ -42,14 +42,11 @@ class Work extends React.Component {
           <Lightbox
             mainSrc={data.frontmatter.images[photoIndex].image}
             nextSrc={
-              data.frontmatter.images[
-                (photoIndex + 1) % data.frontmatter.images.length
-              ].image
+              data.frontmatter.images[(photoIndex + 1) % data.frontmatter.images.length].image
             }
             prevSrc={
               data.frontmatter.images[
-                (photoIndex + data.frontmatter.images.length - 1) %
-                  data.frontmatter.images.length
+                (photoIndex + data.frontmatter.images.length - 1) % data.frontmatter.images.length
               ].image
             }
             onCloseRequest={() => this.setState({ isOpen: false })}
@@ -71,10 +68,7 @@ class Work extends React.Component {
         <h4>{data.header}</h4>
         <Date date={data.frontmatter.date} />
         <p>{data.excerpt}</p>
-        <ArrowButton
-          action={() => navigateTo(route)}
-          text="read more"
-        />
+        <ArrowButton action={() => navigateTo(route)} text="read more" />
       </div>
     );
   }

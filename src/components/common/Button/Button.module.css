@@ -1,4 +1,4 @@
-@import "../../../assets/styles/config.css";
+@import '../../../assets/styles/config.css';
 
 .btn {
   height: 5rem;
@@ -8,24 +8,6 @@
   background: color(var(--black) tint(20%));
   border: none;
   cursor: pointer;
-
-  &:disabled {
-    background: color(var(--black) tint(20%));
-    color: color(var(--white) shade(10%));
-    cursor: auto;
-
-    &:hover {
-      background: color(var(--black) tint(20%));
-      color: color(var(--white) shade(10%));
-    }
-  }
-
-  &.allCaps {
-
-    & .btnTxt {
-      text-transform: uppercase;
-    }
-  }
 
   & .btnTxt {
     height: 3.75rem;
@@ -37,6 +19,12 @@
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     font-size: 1.75rem;
+  }
+
+  &.allCaps {
+    & .btnTxt {
+      text-transform: uppercase;
+    }
   }
 
   &.medium {
@@ -71,6 +59,17 @@
 
   &:focus {
     outline: none;
+  }
+
+  &:disabled {
+    background: color(var(--black) tint(20%));
+    color: color(var(--white) shade(10%));
+    cursor: auto;
+
+    &:hover {
+      background: color(var(--black) tint(20%));
+      color: color(var(--white) shade(10%));
+    }
   }
 
   &.primary {

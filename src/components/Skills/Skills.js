@@ -4,7 +4,6 @@ import AnimatedNumber from 'react-animated-number';
 import VisibilitySensor from 'react-visibility-sensor';
 import CircularProgressbar from 'react-circular-progressbar';
 import config from '../../../data/config.json';
-import data from '../../../data/skills';
 
 import content from '../../content/skills.json';
 import styles from './Skills.module.css';
@@ -29,7 +28,8 @@ const Bar = ({ text, value }) => (
           }}
           duration={config.numberAnimDuration}
           stepPrecision={0}
-        />%
+        />
+        %
       </div>
     </div>
     <div className={styles.bar}>
@@ -77,11 +77,7 @@ class Skills extends React.Component {
             <h3>{skill1.heading}</h3>
             <p>{skill1.text}</p>
             {Object.keys(chart1).map((key, index) => (
-              <Bar
-                key={key}
-                text={chart1[key].text}
-                value={this.state.valuesSkills1[index]}
-              />
+              <Bar key={key} text={chart1[key].text} value={this.state.valuesSkills1[index]} />
             ))}
             <h3>{content.otherSkills.heading}</h3>
             <p>{content.otherSkills.text}</p>
@@ -91,11 +87,7 @@ class Skills extends React.Component {
             <p>{skill2.text}</p>
             <div>
               {Object.keys(chart2).map((key, index) => (
-                <Circle
-                  key={key}
-                  text={chart2[key].text}
-                  value={this.state.valuesSkills2[index]}
-                />
+                <Circle key={key} text={chart2[key].text} value={this.state.valuesSkills2[index]} />
               ))}
             </div>
           </div>
@@ -104,13 +96,5 @@ class Skills extends React.Component {
     );
   }
 }
-
-// Skills.defaultProps = {
-//   firstName: 'John',
-// };
-
-// Skills.propTypes = {
-//   firstName: PropTypes.string.isRequired,
-// };
 
 export default Skills;

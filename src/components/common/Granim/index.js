@@ -7,12 +7,7 @@ export default class GranimComp extends Component {
     id: PropsType.string,
     name: PropsType.string,
     elToSetClassOn: PropsType.string,
-    direction: PropsType.oneOf(
-      'diagonal',
-      'left-right',
-      'top-bottom',
-      'radial',
-    ),
+    direction: PropsType.oneOf('diagonal', 'left-right', 'top-bottom', 'radial'),
     isPausedWhenNotInView: PropsType.bool,
     opacity: PropsType.arrayOf(PropsType.number).isRequired,
     stateTransitionSpeed: PropsType.number,

@@ -1,7 +1,7 @@
-@import "../assets/styles/config.css";
+@import '../assets/styles/config.css';
 
 .parallax {
-  background-image: url("../../images/parallax-7.jpg");
+  background-image: url('../../images/parallax-7.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

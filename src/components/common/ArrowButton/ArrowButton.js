@@ -17,9 +17,7 @@ const Text = ({ text, direction }) => (
   </span>
 );
 
-const IconRenderer = ({ arrowIcon }) => (
-  <Icon icon={arrowIcon} color={colors.text} spin={false} />
-);
+const IconRenderer = ({ arrowIcon }) => <Icon icon={arrowIcon} color={colors.text} spin={false} />;
 
 const ArrowButton = ({ action, text, direction }) => {
   const arrowIcon = direction === 'r' ? 'arrowRight' : 'arrowLeft';
@@ -35,8 +33,8 @@ const ArrowButton = ({ action, text, direction }) => {
     }
     return (
       <React.Fragment>
-          <IconRenderer arrowIcon={arrowIcon} />
-          <Text text={text} direction={direction} />
+        <IconRenderer arrowIcon={arrowIcon} />
+        <Text text={text} direction={direction} />
       </React.Fragment>
     );
   };

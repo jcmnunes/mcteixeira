@@ -21,9 +21,7 @@ const Stat = ({ value, title, desc }) => (
           fontWeight: 700,
           transitionProperty: 'background-color, color, opacity',
         }}
-        frameStyle={perc =>
-          perc === 100 ? {} : { backgroundColor: colors.blue80 }
-        }
+        frameStyle={perc => (perc === 100 ? {} : { backgroundColor: colors.blue80 })}
         duration={config.numberAnimDuration}
         stepPrecision={0}
       />

@@ -1,4 +1,4 @@
-@import "../../assets/styles/config.css";
+@import '../../assets/styles/config.css';
 
 .achievements {
   background: color(var(--text) tint(95%));
