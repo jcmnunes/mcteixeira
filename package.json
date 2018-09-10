@@ -35,6 +35,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "start": "npm run develop",
     "prebuild": "rimraf public",
     "build": "gatsby build",
     "postbuild": "babel-node tools/htaccess",

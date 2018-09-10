@@ -1,6 +1,9 @@
 @import '../../../assets/styles/config.css';
 
 .work {
+  display: grid;
+  grid-template-rows: 200px auto auto;
+
   & .thumbnail {
     position: relative;
 
@@ -15,8 +18,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 5px;
+      width: 100%;
+      height: 100%;
       visibility: hidden;
       opacity: 0;
       background: var(--text);

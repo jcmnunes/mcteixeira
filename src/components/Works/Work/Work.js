@@ -25,8 +25,10 @@ class Work extends React.Component {
 
     return (
       <div className={styles.work}>
-        <div className={styles.thumbnail}>
-          <img src={data.frontmatter.thumbnail} alt="" />
+        <div
+          className={styles.thumbnail}
+          style={{ background: `url(${data.frontmatter.thumbnail})`, backgroundSize: 'cover' }}
+        >
           <div className={styles.backdrop} />
           <div className={styles.links}>
             <div onClick={() => this.setState({ isOpen: true })}>
@@ -65,7 +67,7 @@ class Work extends React.Component {
           />
         )}
 
-        <h4>{data.header}</h4>
+        <h4>{data.frontmatter.title}</h4>
         <Date date={data.frontmatter.date} />
         <p>{data.excerpt}</p>
         <ArrowButton action={() => navigateTo(route)} text="read more" />
