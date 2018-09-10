@@ -6,6 +6,9 @@
 
   & .thumbnail {
     position: relative;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     & img {
       max-width: 100%;

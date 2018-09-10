@@ -27,7 +27,7 @@ class Work extends React.Component {
       <div className={styles.work}>
         <div
           className={styles.thumbnail}
-          style={{ background: `url(${data.frontmatter.thumbnail})`, backgroundSize: 'cover' }}
+          style={{ backgroundImage: `url(${data.frontmatter.thumbnail})` }}
         >
           <div className={styles.backdrop} />
           <div className={styles.links}>
