@@ -62,7 +62,7 @@ export const query = graphql`
       }
     }
 
-    works: allMarkdownRemark {
+    works: allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
