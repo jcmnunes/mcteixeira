@@ -43,6 +43,8 @@ This site uses [Netlify CMS](https://www.netlifycms.org/) as the CMS. With Netli
 stored in this repository. Work entries, for instance, are saved in the `src/works/` directory as
 `.md` files.
 
-### Loging in into the CMS
+### Logging into the CMS
 
-In order to login, an account must be created. Contact the site admin if you need an account. Once
+The CMS can be accessed at [mcteixeira.com/admin/](https://www.mcteixeira.com/admin/). In order to
+login, an account must be created. Contact the site admin if you need one. You will receive an email
+asking you to define a password.
