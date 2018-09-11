@@ -30,6 +30,36 @@
     url('../fonts/nunito-v9-latin-700.woff') format('woff');
 }
 
+/* lora-regular - latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora Regular'), local('Lora-Regular'),
+    url('../fonts/lora-v12-latin-regular.woff2') format('woff2'),
+    url('../fonts/lora-v12-latin-regular.woff') format('woff');
+}
+
+/* lora-italic - latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'),
+    url('../fonts/lora-v12-latin-italic.woff2') format('woff2'),
+    url('../fonts/lora-v12-latin-italic.woff') format('woff');
+}
+
+/* lora-700 - latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lora Bold'), local('Lora-Bold'),
+    url('../fonts/lora-v12-latin-700.woff2') format('woff2'),
+    url('../fonts/lora-v12-latin-700.woff') format('woff');
+}
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -41,8 +71,8 @@ html {
 
 body {
   margin: 0;
-  color: color(var(--text) tint(20%));
-  font-size: 1.8rem;
+  color: var(--text);
+  font-size: 2rem;
   font-family: 'Nunito', Helvetica, Arial, sans-serif;
 }
 
@@ -67,7 +97,7 @@ h3 {
 }
 
 label {
-  color: color(var(--text) tint(20%));
+  color: var(--text);
   font-size: 1.75rem;
   font-weight: normal;
   margin: 0;
@@ -100,7 +130,7 @@ input[type='email'] {
   font-size: 1.75rem;
   font-weight: 400;
   height: 5rem;
-  color: color(var(--text) tint(20%));
+  color: var(--text);
   background-color: var(--white);
   padding: 0 1.5rem;
   line-height: normal;
@@ -147,7 +177,7 @@ textarea {
   resize: none;
   font-size: 1.75rem;
   font-weight: 400;
-  color: color(var(--text) tint(20%));
+  color: var(--text);
   background-color: var(--white);
   padding: 1rem 1.5rem;
   line-height: normal;
@@ -229,7 +259,7 @@ input:required {
 
 @media (--tiny-viewport) {
   body {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   h1 {
@@ -329,4 +359,12 @@ input:required {
 
 .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
   stroke: transparent;
+}
+
+/* Prism */
+:global(.gatsby-highlight) {
+  & pre[class*='language-'] {
+    margin: 0 0 5rem 0;
+    font-size: 2rem;
+  }
 }

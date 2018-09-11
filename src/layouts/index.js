@@ -1,10 +1,9 @@
-import '../assets/styles/global.css';
-// import 'prismjs/themes/prism.css';
-import './prism.css';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+
+import 'prismjs/themes/prism.css';
+import '../assets/styles/global.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>
