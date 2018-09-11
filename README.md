@@ -47,4 +47,4 @@ stored in this repository. Work entries, for instance, are saved in the `src/wor
 
 The CMS can be accessed at [mcteixeira.com/admin/](https://www.mcteixeira.com/admin/). In order to
 login, an account must be created. Contact the site admin if you need one. You will receive an email
-asking you to define a password.
+asking you to define a new password. Once inside, almost all site's content can be easily edited.
