@@ -40,9 +40,16 @@
     "build": "gatsby build",
     "postbuild": "babel-node tools/htaccess",
     "develop": "gatsby develop",
-    "lint": "eslint src --fix",
+    "lint": "eslint src --fix --max-warnings=0",
     "slint": "stylelint \"src/**/*.css\" --fix --config .stylelintrc",
-    "colors": "babel-node tools/colors/colors.js"
+    "colors": "babel-node tools/colors/colors.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run lint",
+      "git add"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -57,6 +64,8 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
     "prettier": "^1.14.2",
     "prettier-stylelint": "^0.4.2",
     "stylelint": "^8.3.1",

@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Icon from '../Icon';
-
-import colors from '../../../assets/colors';
 import styles from './ArrowButton.module.css';
 
 const Text = ({ text, direction }) => (
