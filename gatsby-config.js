@@ -22,7 +22,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 700,
-              // wrapperStyle: 'margin: 15px -30px !important',
+              wrapperStyle: 'margin: 5rem auto !important',
             },
           },
         ],

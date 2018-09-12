@@ -6,9 +6,10 @@
   align-items: center;
   color: var(--text);
   cursor: pointer;
+  transition: all 0.2s ease;
 
   & .text {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     text-transform: uppercase;
 
@@ -22,8 +23,6 @@
   }
 
   &:hover {
-    & .text {
-      text-decoration: underline;
-    }
+    color: var(--blue);
   }
 }
