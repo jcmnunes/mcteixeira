@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Icon from '../Icon';
 
-import colors from '../../../assets/colorsz';
+import colors from '../../../assets/colorszz';
 import styles from './ArrowButton.module.css';
 
 const Text = ({ text, direction }) => (
