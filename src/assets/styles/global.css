@@ -368,3 +368,7 @@ input:required {
     font-size: 2rem;
   }
 }
+
+:not(pre) > code[class*='language-'] {
+  font-size: 2rem;
+}
