@@ -40,7 +40,7 @@
     "build": "gatsby build",
     "postbuild": "babel-node tools/htaccess",
     "develop": "gatsby develop",
-    "lint": "eslint src --fix",
+    "lint": "eslint src --fix --max-warnings=0",
     "slint": "stylelint \"src/**/*.css\" --fix --config .stylelintrc",
     "colors": "babel-node tools/colors/colors.js",
     "precommit": "lint-staged"
