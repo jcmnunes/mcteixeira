@@ -46,7 +46,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "src/*/*.js": [
+    "src/**/*.js": [
       "npm run lint",
       "git add"
     ]
