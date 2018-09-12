@@ -68,6 +68,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            author
             date(formatString: "MMM YY")
             thumbnail
             images {
