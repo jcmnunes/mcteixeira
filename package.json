@@ -43,7 +43,13 @@
     "lint": "eslint src --fix",
     "slint": "stylelint \"src/**/*.css\" --fix --config .stylelintrc",
     "colors": "babel-node tools/colors/colors.js",
-    "precommit": "pretty-quick --staged"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/*/*.js": [
+      "npm run lint",
+      "git add"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
