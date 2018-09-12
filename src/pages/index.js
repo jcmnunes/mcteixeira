@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 import styles from './index.module.css';
 
 import headings from '../content/headings.json';
-
+console.log(' okdmfc askdm ');
 const IndexPage = props => (
   <div>
     <Navbar pathname={props.location.pathname} />
