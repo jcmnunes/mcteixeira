@@ -17,7 +17,7 @@ const Text = ({ text, direction }) => (
   </span>
 );
 
-const IconRenderer = ({ arrowIcon }) => <Icon icon={arrowIcon} color={colors.text} spin={false} />;
+const IconRenderer = ({ arrowIcon }) => <Icon icon={arrowIcon} spin={false} />;
 
 const ArrowButton = ({ action, text, direction }) => {
   const arrowIcon = direction === 'r' ? 'arrowRight' : 'arrowLeft';

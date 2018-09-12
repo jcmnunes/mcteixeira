@@ -98,12 +98,16 @@
     }
 
     & ul {
+      margin-bottom: 5rem;
+
       & li {
         margin-bottom: 2rem;
       }
     }
 
     & ol {
+      margin-bottom: 5rem;
+
       & li {
         margin-bottom: 2rem;
       }
