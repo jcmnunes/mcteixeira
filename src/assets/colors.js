@@ -14,6 +14,7 @@ export default {
   blue80: '#ccebf5',
   blue90: '#e6f5fa',
   blue95: '#f2fafc',
+
   // Color: text
   textShade5: '#272d30',
   textShade10: '#252a2e',
