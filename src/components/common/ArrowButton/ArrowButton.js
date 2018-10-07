@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Icon from '../Icon';
-
-import colors from '../../../assets/colors';
 import styles from './ArrowButton.module.css';
 
 const Text = ({ text, direction }) => (
@@ -17,7 +15,7 @@ const Text = ({ text, direction }) => (
   </span>
 );
 
-const IconRenderer = ({ arrowIcon }) => <Icon icon={arrowIcon} color={colors.text} spin={false} />;
+const IconRenderer = ({ arrowIcon }) => <Icon icon={arrowIcon} spin={false} />;
 
 const ArrowButton = ({ action, text, direction }) => {
   const arrowIcon = direction === 'r' ? 'arrowRight' : 'arrowLeft';

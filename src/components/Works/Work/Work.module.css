@@ -3,6 +3,9 @@
 .work {
   display: grid;
   grid-template-rows: 200px auto auto;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  transform: scale(1);
+  transition: transform 0.3s ease;
 
   & .thumbnail {
     position: relative;
@@ -64,29 +67,40 @@
         }
       }
     }
+  }
 
-    &:hover {
-      img {
-        transform: scale(1.1);
-      }
+  &:hover {
+    transform: scale(1.05);
 
-      & .backdrop {
-        visibility: visible;
-        opacity: 0.5;
-      }
+    img {
+      transform: scale(1.1);
+    }
 
-      & .links {
-        visibility: visible;
-        transform: scale(1);
-      }
+    & .backdrop {
+      visibility: visible;
+      opacity: 0.5;
+    }
+
+    & .links {
+      visibility: visible;
+      transform: scale(1);
     }
   }
 
-  & .title {
-    display: flex;
+  & .details {
+    padding: 0 20px 20px;
 
-    & h4 {
-      flex: 1;
+    & .author {
+      color: var(--blue);
+      margin: 0 0 1rem;
+    }
+
+    & .title {
+      display: flex;
+
+      & h4 {
+        flex: 1;
+      }
     }
   }
 }

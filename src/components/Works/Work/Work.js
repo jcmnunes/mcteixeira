@@ -67,10 +67,13 @@ class Work extends React.Component {
           />
         )}
 
-        <h4>{data.frontmatter.title}</h4>
-        <Date date={data.frontmatter.date} />
-        <p>{data.excerpt}</p>
-        <ArrowButton action={() => navigateTo(route)} text="read more" />
+        <div className={styles.details}>
+          <h4>{data.frontmatter.title}</h4>
+          <h5 className={styles.author}>{data.frontmatter.author}</h5>
+          <Date date={data.frontmatter.date} />
+          <p>{data.excerpt}</p>
+          <ArrowButton action={() => navigateTo(route)} text="read more" />
+        </div>
       </div>
     );
   }
