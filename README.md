@@ -44,10 +44,9 @@ automatically when pushing into it.
 
 ## CMS - Netlify CMS
 
-This site uses [Netlify CMS](https://www.netlifycms.org/) as
-
-the CMS. With Netlify CMS, content is stored in this repository. Work entries, for instance, are
-saved in the `src/works/` directory as `.md` files.
+This site uses [Netlify CMS](https://www.netlifycms.org/) as the CMS. With Netlify CMS, content is
+stored in this repository. Work entries, for instance, are saved in the `src/works/` directory as
+`.md` files.
 
 The CMS can be accessed at [mcteixeira.com/admin/](https://www.mcteixeira.com/admin/). In order to
 login, an account must be created. Contact the site admin if you need one. You will receive an email
