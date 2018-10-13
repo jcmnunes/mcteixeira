@@ -18,6 +18,8 @@
     "gatsby-source-filesystem": "^1.5.36",
     "gatsby-transformer-remark": "^1.7.42",
     "gatsby-transformer-sharp": "^1.6.24",
+    "lodash.isequal": "^4.5.0",
+    "lodash.uniqwith": "^4.5.0",
     "netlify-cms": "2.0.5",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.0",
