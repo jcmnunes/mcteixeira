@@ -1,5 +1,4 @@
 /* global graphql */
-/* eslint-disable react/no-danger */
 import React, { Component } from 'react';
 import uniqWith from 'lodash.uniqwith';
 import isEqual from 'lodash.isequal';
