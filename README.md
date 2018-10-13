@@ -11,30 +11,18 @@ To start the development server:
 
 ```
 $ npm start
-
-*- or -*
-
-$ gatsby develop
 ```
 
 To build the site:
 
 ```
 $ npm run build
-
-*- or -*
-
-$ gatsby build
 ```
 
 To test the build by starting a local HTML server:
 
 ```
 $ npm run serve
-
-*- or -*
-
-$ gatsby serve
 ```
 
 ## Hosting
@@ -48,7 +36,6 @@ This site uses [Netlify CMS](https://www.netlifycms.org/) as the CMS. With Netli
 stored in this repository. Work entries, for instance, are saved in the `src/works/` directory as
 `.md` files.
 
-The CMS can be accessed at [mcteixeira.com/admin/](https://www.mcteixeira.com/admin/). In order to
-login, an account must be created. Contact the site admin if you need one. You will receive an email
-asking you to define a new password. If you are new to Netlify CMS, please refer to the
-[docs](https://www.netlifycms.org/docs/intro).
+The CMS can be accessed at [mcteixeira.com/admin/](https://www.mcteixeira.com/admin/). Contact the
+site admin to create an account. You will receive an email asking you to define a new password. If
+you are new to Netlify CMS, please refer to the [docs](https://www.netlifycms.org/docs/intro).
