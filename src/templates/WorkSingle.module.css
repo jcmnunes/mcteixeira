@@ -19,7 +19,7 @@
 
   & h1 {
     color: var(--text);
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
     text-transform: none;
     border-bottom: none;
@@ -38,7 +38,7 @@
     margin-top: 6rem;
 
     & h1 {
-      font-size: 3.75rem;
+      font-size: 3rem;
       color: color(var(--text) tint(0%));
       text-transform: none;
       border-bottom: none;
@@ -48,7 +48,7 @@
     }
 
     & h2 {
-      font-size: 3.25rem;
+      font-size: 2.5rem;
       font-weight: 700;
       margin-top: 5rem;
       margin-bottom: 1rem;
@@ -129,6 +129,10 @@
 
 @media (--tiny-viewport) {
   .root {
+    & h1 {
+      font-size: 5rem;
+    }
+
     & .postBody {
       & h1 {
         font-size: 3.75rem;
