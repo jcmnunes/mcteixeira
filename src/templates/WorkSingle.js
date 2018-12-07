@@ -1,6 +1,7 @@
 /* global graphql */
-/* eslint-disable react/no-danger */
 import React, { Component } from 'react';
+import uniqWith from 'lodash.uniqwith';
+import isEqual from 'lodash.isequal';
 import Img from 'gatsby-image';
 
 import Navbar from '../components/Navbar';
@@ -12,6 +13,8 @@ import styles from './WorkSingle.module.css';
 export default class WorkSingle extends Component {
   render() {
     const { data, location } = this.props;
+    const { tags } = data.markdownRemark.frontmatter;
+    const uniqueTags = uniqWith(tags, isEqual);
     const { heroImage } = data.markdownRemark.fields;
     return (
       <div className={styles.root}>
@@ -31,7 +34,7 @@ export default class WorkSingle extends Component {
         </div>
         <div className="workSingle-wrapper">
           <div className={styles.tags}>
-            {data.markdownRemark.frontmatter.tags.map(({ tag }) => (
+            {uniqueTags.map(({ tag }) => (
               <span className={styles.tag} key={tag}>
                 {tag}
               </span>
