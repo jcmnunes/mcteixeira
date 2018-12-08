@@ -80,8 +80,6 @@ h1 {
   font-size: 2.5rem;
   color: var(--blue);
   text-transform: uppercase;
-  border-bottom: 1px solid color(var(--text) tint(90%));
-  padding-bottom: 3rem;
   margin-top: 8rem;
   margin-bottom: 5rem;
 }

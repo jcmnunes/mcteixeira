@@ -1,5 +1,4 @@
 import React from 'react';
-import { Hex } from '../icons';
 import profile from '../../../images/profile.jpg';
 
 import styles from './About.module.css';
@@ -13,8 +12,7 @@ const About = () => (
   <div className="flex-grid">
     <div className="col col1">
       <p>
-        <span className={styles.hex}>
-          <Hex size={200} />
+        <span className={styles.profileContainer}>
           <img className={styles.profile} src={profile} alt="profile" />
         </span>
         {content.paragraph1}

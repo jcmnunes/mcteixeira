@@ -21,27 +21,6 @@ export const Logo = ({ size, disabled }) => (
   </svg>
 );
 
-export const Hex = ({ size, disabled, text }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 64 64"
-    width={size}
-    height={size}
-    opacity={disabled ? '0.5' : '1'}
-  >
-    <path fill="#09c" d="M59.71 48V16L32 0 4.29 16v32L32 64l27.71-16z" />
-    <text
-      fill="#fff"
-      fontSize="40px"
-      fontFamily="Nunito-Bold,Nunito"
-      fontWeight={700}
-      transform="translate(20.9 45.82)"
-    >
-      {text}
-    </text>
-  </svg>
-);
-
 export const Home = ({ size, disabled }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

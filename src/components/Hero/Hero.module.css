@@ -83,12 +83,9 @@
 .hero {
   height: calc(100vh - 60px) !important;
   max-height: 60vw !important;
-  background: var(--blue);
   display: block;
-
-  &.canvas {
-    display: none;
-  }
+  background-color: var(--blue);
+  background-image: var(--pattern);
 }
 
 @media (--tiny-viewport) {
@@ -97,14 +94,6 @@
 
     & .header {
       font-size: 3vw;
-    }
-  }
-
-  .hero {
-    display: none;
-
-    &.canvas {
-      display: block;
     }
   }
 }

@@ -1,15 +1,18 @@
 @import '../../assets/styles/config.css';
 
-.hex {
+.profileContainer {
   float: left;
   margin-right: 1rem;
   position: relative;
+  width: 128px;
+  height: 128px;
 
   & .profile {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 73%;
+    width: 75%;
+    height: 75%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
   }

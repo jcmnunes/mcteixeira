@@ -11,8 +11,9 @@
 }
 
 .contact {
-  background: var(--blue);
   padding: 8rem 0;
+  background-color: var(--blue);
+  background-image: var(--pattern);
 
   & h1 {
     color: var(--white);
