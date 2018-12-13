@@ -5,7 +5,7 @@
   display: grid;
   grid-template-rows: 200px auto auto;
   transform: scale(1);
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
 
   & .thumbnail {
     position: relative;
