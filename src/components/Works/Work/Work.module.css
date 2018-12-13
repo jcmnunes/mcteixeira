@@ -1,7 +1,7 @@
 @import '../../../assets/styles/config.css';
 
 .work {
-  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
   display: grid;
   grid-template-rows: 200px auto auto;
   transform: scale(1);
@@ -70,6 +70,7 @@
   }
 
   &:hover {
+    box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3);
     transform: scale(1.02);
 
     img {
