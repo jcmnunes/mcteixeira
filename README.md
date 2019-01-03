@@ -1,5 +1,7 @@
 # M. C. Teixeira - Personal website
 
+**New Repository location**: https://github.com/jcmnunes/mct. 
+
 This is the personal website of M. C. Teixeira ([mcteixeira.com](http://mcteixeira.com/)).
 
 This site is a [Gatsby](https://www.gatsbyjs.org/) blog with [Netlify](https://www.netlify.com)
