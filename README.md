@@ -1,6 +1,6 @@
 # M. C. Teixeira - Personal website
 
-**New Repository location**: https://github.com/jcmnunes/mct. 
+## **New Repository location**: https://github.com/jcmnunes/mct. 
 
 This is the personal website of M. C. Teixeira ([mcteixeira.com](http://mcteixeira.com/)).
 
